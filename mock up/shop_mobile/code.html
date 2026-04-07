@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#57423e",
+                    "error": "#ba1a1a",
+                    "surface-container": "#efefd7",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#705955",
+                    "inverse-surface": "#303221",
+                    "primary-fixed-dim": "#dec0bb",
+                    "primary": "#100403",
+                    "on-tertiary-fixed-variant": "#005307",
+                    "on-tertiary-container": "#349a30",
+                    "error-container": "#ffdad6",
+                    "background": "#fbfbe2",
+                    "tertiary": "#000a00",
+                    "on-surface": "#1b1d0e",
+                    "on-primary-fixed": "#281714",
+                    "outline-variant": "#d3c3c0",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e4e4cc",
+                    "on-secondary-fixed": "#390c00",
+                    "primary-container": "#2c1b18",
+                    "on-secondary-fixed-variant": "#832700",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#dec0bb",
+                    "on-primary-container": "#9b817c",
+                    "tertiary-fixed-dim": "#77dd6a",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dbdcc3",
+                    "on-surface-variant": "#4f4442",
+                    "primary-fixed": "#fbdcd6",
+                    "secondary-fixed": "#ffdbcf",
+                    "surface-container-high": "#eaead1",
+                    "surface-bright": "#fbfbe2",
+                    "outline": "#817472",
+                    "surface": "#fbfbe2",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1d0e",
+                    "secondary-fixed-dim": "#ffb59c",
+                    "tertiary-fixed": "#92fa83",
+                    "surface-container-highest": "#e4e4cc",
+                    "on-tertiary-fixed": "#002201",
+                    "secondary-container": "#fe5e1e",
+                    "inverse-on-surface": "#f2f2d9",
+                    "surface-container-low": "#f5f5dc",
+                    "secondary": "#ab3600",
+                    "tertiary-container": "#002601",
+                    "on-secondary-container": "#551600",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.glass-card {
+    background: rgba(251, 251, 226, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px)
+    }
+.grainy-overlay {
+    position: relative
+    }
+.grainy-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAJnc8LQi4gx-wlUdu-3ZQc_AP9USq_z7B0wqV-sVrG42y0G2jCdwNIrzRGvDeBt8iQZiXE1bU4wBtR5oRmV9iQ04O9SsFXjgxzTdnCUyZBaNhmcCVeNyHwEkK7AaaARG0euB1XjG2MrdaykE3UB3FGkAPY0Rcc9qK9fl7YjAl7tURfLX-z9AQzlj2SCEFL0d5MBKCaY9u5ACu8MD5tqN8RwjyTqWN7cgG9Ts70drLV3zTJOFkNmc_YNWCUtFbVS4ydb9JU8AHcIBB3);
+    opacity: 0.05;
+    pointer-events: none
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="bg-[#FBFBE2]/80 dark:bg-[#100403]/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0px_20px_40px_rgba(44,27,24,0.08)]">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<button class="text-[#100403] dark:text-[#FBFBE2] hover:opacity-70 transition-opacity active:scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-xl font-black tracking-widest text-[#100403] dark:text-[#FBFBE2] font-['Space_Grotesk']">DEOMALI</h1>
+<button class="text-[#100403] dark:text-[#FBFBE2] hover:opacity-70 transition-opacity active:scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4">
+<!-- Editorial Header -->
+<section class="mb-10">
+<h2 class="font-headline text-5xl font-bold tracking-tighter text-primary leading-[0.9] mb-4">
+                FRESH<br/>ROASTS.
+            </h2>
+<p class="text-on-surface-variant max-w-[80%] font-label text-sm tracking-tight leading-relaxed">
+                Small-batch specialty beans sourced directly from the Deomali ranges, roasted for the bold and the restless.
+            </p>
+</section>
+<!-- Filter Drawer Trigger / Horizontal Quick Tags -->
+<div class="flex items-center gap-3 overflow-x-auto no-scrollbar mb-8 pb-2">
+<button class="flex items-center gap-2 bg-primary text-surface px-5 py-3 rounded-full flex-shrink-0 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="tune">tune</span>
+<span class="font-label text-xs font-bold uppercase tracking-widest">Filter</span>
+</button>
+<button class="bg-surface-container-high text-on-surface px-5 py-3 rounded-full flex-shrink-0 font-label text-xs font-bold uppercase tracking-widest border border-outline-variant/15">Single Origin</button>
+<button class="bg-surface-container-high text-on-surface px-5 py-3 rounded-full flex-shrink-0 font-label text-xs font-bold uppercase tracking-widest border border-outline-variant/15">Blends</button>
+<button class="bg-surface-container-high text-on-surface px-5 py-3 rounded-full flex-shrink-0 font-label text-xs font-bold uppercase tracking-widest border border-outline-variant/15">Drip</button>
+</div>
+<!-- Condensed Product Grid (Bento Style) -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Product Card 1 (Large Span) -->
+<div class="col-span-2 relative aspect-[4/5] rounded-[2rem] overflow-hidden grainy-overlay">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Premium coffee bag with minimalist branding against a dark roasted bean background with warm moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEt-yepOT066ZX_V3rpi9IF-09gmih5ucDFqZ53yPnRUxKGGIGjaA1BfjWPT6-YgD0FvMPGVBOJ9bz99c2kVS8v_f-DTMWyZbcegJ5GDKJFC4_kYDyvTvtgmJhdQY_xXEvg3PF6A0SSuLvBya1fH82OAkIHxO9CEBIzOyTZgGvsJ2jvi44ZEJfs5V5TYiirxHzwc2l23AHJPtTLQrNbFiVe50SL_TIAQOM-EgKTb2K2bYbXYTDkeCCLQuTM9w3gJ3Mh-29qtaO71nm"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="glass-card px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-primary mb-3 inline-block">Best Seller</span>
+<h3 class="font-headline text-3xl font-bold text-surface-bright leading-tight">Dark Peak Reserve</h3>
+<div class="flex justify-between items-end mt-2">
+<p class="text-surface-variant font-label text-xs tracking-wider">ROAST: HEAVY DARK</p>
+<p class="text-secondary-container font-headline text-xl font-black">$24.00</p>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-low rounded-[1.5rem] p-4 flex flex-col justify-between">
+<div class="relative aspect-square rounded-xl overflow-hidden mb-3">
+<img class="w-full h-full object-cover" data-alt="A pour over coffee being brewed with steam rising in a minimalist clean cafe setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgsSJnANxXfDCJSTyAUrkMDgHt9FXpIavkoqGb4tMcINVcm3enaItqQMBZOM3PBWMq7iS7FBOMAax8k04dsZesOZcx44SLGBVZgqrl3Ze6dhsT2MHiLpsoa2AW-DLw8qizo54-fJ7lXqCS2n9d7n1hi7mpRCTbTKxkWUf3yiDCH_xNM1MIYR4prYZd3WRbhx55AZ-xgDmLHB67MqfHTW1qOAKYm_thRm6rfarAQH12wkWANJDtlK2bAc3my-W_jwGtQyoeSdx1Jnfr"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-lg text-secondary" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg text-primary leading-none">Aura Mist</h4>
+<p class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest mt-1">Light Roast / Fruity</p>
+<div class="flex justify-between items-center mt-4">
+<span class="font-headline font-black text-primary">$18</span>
+<button class="w-10 h-10 bg-secondary-container text-on-secondary-fixed rounded-full flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-low rounded-[1.5rem] p-4 flex flex-col justify-between">
+<div class="relative aspect-square rounded-xl overflow-hidden mb-3">
+<img class="w-full h-full object-cover" data-alt="Coffee beans falling into a wooden bowl with soft natural light and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWqvIWrhtEPShtNO3DsYfVtnp3ZjfvvMqHhjFl5N15rFH0nr0ArRigJBXnh29qnewHawUEVvRJlNsoPlxb7u-qno0ArsTvGLiD5_mIeLM0q3LetSwAX1dD0EL_rK2ZTFZRo7-zHpvyxIVyFa3bXYNzI0cegs-YQ8FF6ZtgYO5wzfPTeq_Ao3pV4XJgQs4FHLqrM5zbxPxYHcN289qk78PPiSpnWImF4z_g5-jBF_pb9AzlARfZlvjZFwmdP6eYLcSZapTmTjaNhOhI"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-lg text-primary" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg text-primary leading-none">Earth Grind</h4>
+<p class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest mt-1">Medium / Nutty</p>
+<div class="flex justify-between items-center mt-4">
+<span class="font-headline font-black text-primary">$20</span>
+<button class="w-10 h-10 bg-secondary-container text-on-secondary-fixed rounded-full flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Promotion Card (Asymmetric) -->
+<div class="col-span-2 bg-primary-container rounded-[2rem] p-8 grainy-overlay overflow-hidden relative">
+<div class="relative z-10">
+<h3 class="font-headline text-3xl font-bold text-surface leading-none mb-2">BREW AT<br/>HOME.</h3>
+<p class="text-on-primary-container text-xs font-label uppercase tracking-[0.2em] mb-6">Expert Kits Available</p>
+<button class="bg-secondary-container text-on-secondary-fixed px-6 py-3 rounded-full font-label text-xs font-bold uppercase tracking-widest">Shop Gear</button>
+</div>
+<div class="absolute -right-10 -bottom-10 w-48 h-48 opacity-20 border-[20px] border-secondary-container rounded-full"></div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#100403] dark:bg-[#000A00] w-full pt-12 pb-32 px-6 flex flex-col items-center gap-6 text-center">
+<div class="font-['Space_Grotesk'] font-bold text-[#FE5E1E] text-2xl tracking-tighter">DEOMALI</div>
+<div class="flex gap-6">
+<a class="font-['Manrope'] text-xs tracking-widest text-[#F5F5DC]/60 hover:text-[#FE5E1E] transition-colors" href="#">Sourcing</a>
+<a class="font-['Manrope'] text-xs tracking-widest text-[#F5F5DC]/60 hover:text-[#FE5E1E] transition-colors" href="#">Brew Guides</a>
+<a class="font-['Manrope'] text-xs tracking-widest text-[#F5F5DC]/60 hover:text-[#FE5E1E] transition-colors" href="#">Contact</a>
+</div>
+<p class="font-['Manrope'] text-[10px] tracking-widest text-[#F5F5DC]/40">© 2024 DEOMALI ROASTERS</p>
+</footer>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full bg-[#FBFBE2]/90 dark:bg-[#100403]/90 backdrop-blur-md rounded-t-[2rem] z-50 shadow-[0px_-10px_30px_rgba(44,27,24,0.05)] flex justify-around items-center px-8 pb-6 pt-3">
+<a class="flex items-center justify-center text-[#2C1B18] dark:text-[#F5F5DC] w-12 h-12 hover:scale-110 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</a>
+<a class="flex items-center justify-center bg-[#FE5E1E] text-[#FBFBE2] rounded-full w-12 h-12 hover:scale-110 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+</a>
+<a class="flex items-center justify-center text-[#2C1B18] dark:text-[#F5F5DC] w-12 h-12 hover:scale-110 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="local_fire_department">local_fire_department</span>
+</a>
+<a class="flex items-center justify-center text-[#2C1B18] dark:text-[#F5F5DC] w-12 h-12 hover:scale-110 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</a>
+</nav>
+<!-- FAB (Suppressed based on screen rules, but if needed for 'Back to Top' or 'Search' it would go here) -->
+</body></html>

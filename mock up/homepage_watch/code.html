@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#57423e",
+                    "error": "#ba1a1a",
+                    "surface-container": "#efefd7",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#705955",
+                    "inverse-surface": "#303221",
+                    "primary-fixed-dim": "#dec0bb",
+                    "primary": "#100403",
+                    "on-tertiary-fixed-variant": "#005307",
+                    "on-tertiary-container": "#349a30",
+                    "error-container": "#ffdad6",
+                    "background": "#fbfbe2",
+                    "tertiary": "#000a00",
+                    "on-surface": "#1b1d0e",
+                    "on-primary-fixed": "#281714",
+                    "outline-variant": "#d3c3c0",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e4e4cc",
+                    "on-secondary-fixed": "#390c00",
+                    "primary-container": "#2c1b18",
+                    "on-secondary-fixed-variant": "#832700",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#dec0bb",
+                    "on-primary-container": "#9b817c",
+                    "tertiary-fixed-dim": "#77dd6a",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dbdcc3",
+                    "on-surface-variant": "#4f4442",
+                    "primary-fixed": "#fbdcd6",
+                    "secondary-fixed": "#ffdbcf",
+                    "surface-container-high": "#eaead1",
+                    "surface-bright": "#fbfbe2",
+                    "outline": "#817472",
+                    "surface": "#fbfbe2",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1d0e",
+                    "secondary-fixed-dim": "#ffb59c",
+                    "tertiary-fixed": "#92fa83",
+                    "surface-container-highest": "#e4e4cc",
+                    "on-tertiary-fixed": "#002201",
+                    "secondary-container": "#fe5e1e",
+                    "inverse-on-surface": "#f2f2d9",
+                    "surface-container-low": "#f5f5dc",
+                    "secondary": "#ab3600",
+                    "tertiary-container": "#002601",
+                    "on-secondary-container": "#551600",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>@layer base {
+    body {
+        @apply bg-primary text-on-primary-fixed antialiased overflow-hidden;
+        } . watch-face {
+        width: 100vw;
+        height: 100vh;
+        max-width: 320px;
+        max-height: 320px;
+        aspect-ratio: 1/1;
+        margin: auto;
+        border-radius: 5rem;
+        position: relative;
+        overflow: hidden;
+        }
+    }
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAOscxEJHiLdEwBJT8jSWo8QSau2LQWGw2imGB2QPRl8Z_FC7hycLDWldleutf9lKMwzgw23Z9KioHZhKDComNOsHoomyCixNLvW3fVqNbq1M8oKHeI8loSO2KcKvIXW3eUGOPkkeXpoL-iFE8wEsY6nnKHuj6MjkQzgLaaOAYSlGisZymnsb_yV7-bakWlZnQa6U6LBUfPpYjhfesh4bqsBVaN6PFSSi-3fXSX9dEEPIKJpwQIRpihiH1N_Ni9Ds16JQ4hPNmfVA3Z);
+    opacity: 0.05;
+    pointer-events: none
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex items-center justify-center min-h-screen bg-[#000A00]">
+<!-- Smartwatch Container -->
+<div class="watch-face bg-primary relative flex flex-col items-center justify-between p-4 shadow-2xl">
+<div class="grain-overlay absolute inset-0 z-10"></div>
+<!-- Background Roast Visual (Minimalist) -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 mix-blend-overlay" data-alt="Close-up abstract texture of dark roasted coffee beans with cinematic lighting and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3xEmkK_AtH3zgvYeiLPKHzuuZfMlqfXiSIVM-v-NAmlVtj9TAStnhXgZyKGjywZuIPKxsro7UnURH5Yj-hkOcyMHvhrp4kzDGDJzwCSNwmX1HYJx8BMiYtXshzVF-d9RE3ZrpyE1HkKyz-g27UZ7ix4O2-ISq9z5L0a-CxbtI4vwUsfLArAGKyXvvBFCCERYzRUZX6Nzwr1YkC5WHyJhShhGUhsHgPUatOhcMpE9HCcQ_ec8B8-VM3QtM8YicUNgFzP_XALU7zoKH"/>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-primary"></div>
+</div>
+<!-- Top Status Row -->
+<div class="w-full flex justify-between items-center px-4 pt-4 z-20">
+<span class="text-[10px] font-headline font-black tracking-widest text-on-secondary-container">DEOMALI</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-[14px] text-secondary-container">local_fire_department</span>
+</div>
+</div>
+<!-- Main Content Core -->
+<div class="flex flex-col items-center text-center px-4 z-20 mt-2">
+<!-- Tagline -->
+<p class="font-headline text-[11px] uppercase tracking-[0.2em] text-surface-variant mb-1">Brewed at the Peak</p>
+<!-- Headline / Roast Name -->
+<h1 class="font-headline text-3xl font-black leading-none tracking-tighter text-background">
+                SUMATRA<br/>GAYO
+            </h1>
+<!-- Roast Profile Indicator -->
+<div class="mt-3 flex items-center gap-1.5">
+<div class="h-1 w-8 rounded-full bg-primary-container"></div>
+<div class="h-1 w-8 rounded-full bg-secondary-container"></div>
+<div class="h-1 w-8 rounded-full bg-primary-container"></div>
+<span class="text-[8px] font-label font-bold uppercase tracking-widest text-surface-variant/60 ml-1">Dark</span>
+</div>
+</div>
+<!-- Action Area -->
+<div class="w-full flex flex-col items-center gap-2 pb-6 z-20">
+<button class="bg-secondary-container text-on-secondary-fixed py-2.5 px-8 rounded-full font-label font-extrabold text-[12px] uppercase tracking-widest active:scale-95 transition-transform shadow-lg shadow-primary-container/40">
+                Shop Now
+            </button>
+<!-- Quick Glance Data -->
+<div class="flex items-center gap-3 mt-1 opacity-80">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px] text-surface-variant">schedule</span>
+<span class="text-[9px] font-body text-surface-variant">Fresh: 2h ago</span>
+</div>
+<div class="w-1 h-1 rounded-full bg-surface-variant/30"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px] text-surface-variant">thermostat</span>
+<span class="text-[9px] font-body text-surface-variant">92°C</span>
+</div>
+</div>
+</div>
+<!-- Navigation Dot indicators (Simulated Watch Interaction) -->
+<div class="absolute right-2 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 z-20">
+<div class="w-1 h-1 rounded-full bg-secondary-container"></div>
+<div class="w-1 h-1 rounded-full bg-surface-variant/20"></div>
+<div class="w-1 h-1 rounded-full bg-surface-variant/20"></div>
+</div>
+</div>
+</body></html>

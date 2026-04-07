@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#fbfbe2",
+              "secondary": "#ab3600",
+              "tertiary-fixed-dim": "#77dd6a",
+              "on-tertiary-fixed": "#002201",
+              "inverse-on-surface": "#f2f2d9",
+              "on-primary-fixed-variant": "#57423e",
+              "tertiary-container": "#002601",
+              "primary-fixed-dim": "#dec0bb",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              "surface-container-low": "#f5f5dc",
+              "on-background": "#1b1d0e",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#390c00",
+              "secondary-fixed-dim": "#ffb59c",
+              "secondary-container": "#fe5e1e",
+              "on-primary": "#ffffff",
+              "surface-bright": "#fbfbe2",
+              "primary-fixed": "#fbdcd6",
+              "error": "#ba1a1a",
+              "on-primary-fixed": "#281714",
+              "tertiary": "#000a00",
+              "on-primary-container": "#9b817c",
+              "inverse-primary": "#dec0bb",
+              "on-tertiary-container": "#349a30",
+              "tertiary-fixed": "#92fa83",
+              "on-surface-variant": "#4f4442",
+              "surface-tint": "#705955",
+              "on-secondary-fixed-variant": "#832700",
+              "surface-dim": "#dbdcc3",
+              "on-error-container": "#93000a",
+              "on-secondary-container": "#551600",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#e4e4cc",
+              "primary": "#100403",
+              "surface-container-highest": "#e4e4cc",
+              "outline": "#817472",
+              "outline-variant": "#d3c3c0",
+              "primary-container": "#2c1b18",
+              "on-surface": "#1b1d0e",
+              "surface-container-high": "#eaead1",
+              "on-tertiary-fixed-variant": "#005307",
+              "surface": "#fbfbe2",
+              "secondary-fixed": "#ffdbcf",
+              "surface-container": "#efefd7",
+              "error-container": "#ffdad6",
+              "inverse-surface": "#303221"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.custom-spring {
+    transition-timing-function: cubic-bezier(0.4, 0.1, 0.3, 1.5)
+    }
+.grain-overlay {
+    position: relative
+    }
+.grain-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAWQLG96aIPfaodR_XZWDTNfMQNhZ01dWLaA3bt5ZSb1xnzw48EtNsJISAkUdNND_mDz1MWm8MRQ_jni389DVnbhWFwb1z_UehbjCLzAiUYxQKGFhKbMyf3XvxYFuCDHD4x7EMyeXa3fzbwJCg5DKxdtCajmFNN6qpQb849nC4_RfqTSZooM7D32PmAF1vs4fR69rD8NnrpYyQiIpzz3JpHL0PIHo0-R85jk9Ku1Qbk7pxcH61ahys98UQI0Ulu0oon7zOKWhTUONi0);
+    opacity: 0.05;
+    pointer-events: none
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 backdrop-blur-xl shadow-[0px_20px_40px_rgba(44,27,24,0.08)]">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<a class="text-2xl font-black tracking-tighter text-[#100403] font-headline" href="#">Deomali Coffee</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-[#AB3600] border-b-2 border-[#AB3600] pb-1 hover:opacity-80 transition-opacity duration-300" href="#">Shop</a>
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-[#100403] hover:text-[#AB3600] hover:opacity-80 transition-opacity duration-300" href="#">About</a>
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-[#100403] hover:text-[#AB3600] hover:opacity-80 transition-opacity duration-300" href="#">Café</a>
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-[#100403] hover:text-[#AB3600] hover:opacity-80 transition-opacity duration-300" href="#">Subscription</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:opacity-80 transition-opacity duration-300 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary">shopping_bag</span>
+</button>
+<button class="md:hidden p-2">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20 max-w-7xl mx-auto px-6">
+<!-- Editorial Header -->
+<header class="mb-16">
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tight text-primary leading-none mb-6">
+                PROVISIONS<br/><span class="text-secondary italic">FOR THE BOLD</span>
+</h1>
+<p class="max-w-xl text-lg text-on-surface-variant font-medium">
+                Sustainably sourced, meticulously roasted. From the peak of Deomali to your daily ritual.
+            </p>
+</header>
+<div class="flex flex-col md:flex-row gap-12">
+<!-- Sidebar Filters -->
+<aside class="w-full md:w-64 flex-shrink-0 space-y-10">
+<div>
+<h3 class="font-headline font-bold uppercase tracking-widest text-sm mb-6 text-primary">Roast Level</h3>
+<div class="space-y-4">
+<label class="flex items-center group cursor-pointer">
+<input class="w-5 h-5 rounded-sm border-outline bg-surface-container-low text-secondary focus:ring-secondary mr-3" type="checkbox"/>
+<span class="text-sm font-semibold group-hover:text-secondary transition-colors">Light Roast</span>
+</label>
+<label class="flex items-center group cursor-pointer">
+<input class="w-5 h-5 rounded-sm border-outline bg-surface-container-low text-secondary focus:ring-secondary mr-3" type="checkbox"/>
+<span class="text-sm font-semibold group-hover:text-secondary transition-colors">Medium Roast</span>
+</label>
+<label class="flex items-center group cursor-pointer">
+<input class="w-5 h-5 rounded-sm border-outline bg-surface-container-low text-secondary focus:ring-secondary mr-3" type="checkbox"/>
+<span class="text-sm font-semibold group-hover:text-secondary transition-colors">Dark Roast</span>
+</label>
+</div>
+</div>
+<div>
+<h3 class="font-headline font-bold uppercase tracking-widest text-sm mb-6 text-primary">Flavor Profiles</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold hover:bg-secondary hover:text-white transition-all">FRUITY</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold hover:bg-secondary hover:text-white transition-all">NUTTY</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold hover:bg-secondary hover:text-white transition-all">CHOCOLATE</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold hover:bg-secondary hover:text-white transition-all">CITRUS</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold hover:bg-secondary hover:text-white transition-all">CARAMEL</button>
+</div>
+</div>
+<div>
+<h3 class="font-headline font-bold uppercase tracking-widest text-sm mb-6 text-primary">Price Range</h3>
+<div class="h-1 bg-surface-container-highest relative rounded-full">
+<div class="absolute h-1 bg-secondary w-2/3 rounded-full"></div>
+<div class="absolute -top-2 left-0 w-5 h-5 bg-secondary border-4 border-background rounded-full cursor-pointer"></div>
+<div class="absolute -top-2 left-2/3 w-5 h-5 bg-secondary border-4 border-background rounded-full cursor-pointer"></div>
+</div>
+<div class="flex justify-between mt-4 text-xs font-bold text-outline">
+<span>$10</span>
+<span>$50+</span>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant/30">
+<button class="w-full py-4 bg-primary text-white font-headline font-bold uppercase tracking-widest text-xs hover:bg-secondary transition-colors rounded-lg">Clear All Filters</button>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-grow">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8">
+<!-- Product Card 1 -->
+<div class="group relative flex flex-col cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low relative mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 custom-spring group-hover:scale-110 group-hover:opacity-0" data-alt="Premium brown coffee bean bag packaging standing on a minimalist stone surface with dramatic side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHPJ7Eke6GHEL1K60-IeLewSULsBcKBmdw6W7zR5lHdJodaX-V1yfu5m8px-7wB7GYhhlA5l-8Nm2qr_xdrooQuGB4c05Q3D0O1p47qbxoZSzXkebGCsp6Noz4asuyoNWSbgxutcTpt-W3f_OoNb6vRhnWa2Y4BXZgq7r0_ZDSc1JYdRgW2mKos8Zolg5c7rHfjkCRrFb_M7mkxE_k0o6VO7sY25WhTlkpn2ahd2FGC2Zby4GWSvnRHngp5IoQnhSUKJQqKoyOicXS"/>
+<img class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100 scale-105" data-alt="Close up detail of roasted dark coffee beans overflowing from a ceramic container with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ6uIRLMemmLVgqpqa2VUYefsM0vnFCaMXCYKDPMI30pPVDG7hAiD76QW8yUNeHruw1VuzLtVxkzQ2slePXTv4xI1YqVdXzL4qE2v7iXNGtSmkiqfHrjI-365H-wEkt4sRQadyLZ2Yg8yA59e3gXHE5FVDmcnR0ya-Nq_6uf4MJkIeVwYIffMk_c2tV-NFO2YwCRyXfUOaWu8Fh_682B6RilA10fnF2T6AJ8pnnTcaz_AZf0JfwtjVmc5bCL9Vz7EwvY6l1JLwdIgf"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-fixed text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Bestseller</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-xl font-bold text-primary group-hover:text-secondary transition-colors">DEOMALI PEAK</h4>
+<p class="text-sm font-medium text-on-surface-variant">Light Roast • Ethiopia</p>
+</div>
+<span class="font-headline font-bold text-lg">$24.00</span>
+</div>
+<button class="mt-4 flex items-center justify-center gap-2 py-3 border-2 border-primary rounded-full font-bold text-xs uppercase tracking-widest opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined text-sm">shopping_bag</span> Add to Cart
+                        </button>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative flex flex-col cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low relative mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 custom-spring group-hover:scale-110 group-hover:opacity-0" data-alt="Minimalist matte black coffee canister with orange typography against a clean beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW0QSOnHSIENVTmY4RhpXj73SDrv8ZTV7ibgz7echmiKTm4091ge-MmczloJrND_pYsY_j-3Jcm4k8i_vX3HkC0cU_q1eMMbqoAVlynfSBbsDbDCM7GWBAb1o81_iIZ6aKQa2ayxBm9L1O8QysK2keYhzJ3e_EFrAxncE7VG3LIViPX7ITlBhzkiMUI6pSu7VEXW3hK2veyP3bX7Vj3_QcPiuL9xQNzgch-ZnFWkZ_g73Y8RlWZwNb3RMLIqvS_FqsWHFKRCGwNpw8"/>
+<img class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100 scale-105" data-alt="Top down view of a barista pouring latte art in a dark textured ceramic mug on a wooden counter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlrvMoLb0ttZ75AfYhdjzRQoLh5z-PiJQCSAOk8XuUpznLID3z1gvbjVFfjt6PziNUzsNP7DeQHaGv9C9n86iYuPk2W1a-KGyPZzJ4yuMImOHuofHeojQXYyq1wRvL80sRliv9q9v6KDvEs4SRB_bPZT04zcuY4bNFcrMdZojq1H2g9_KC84MfUIAqx-chUSuONVkQfXOlMNaj5vmZJaDBcar0qwJ24GBeB5IZaGQ9HGBVqmdZNSC_h_m1aapp2wUX-bLMsIKbLhGM"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-xl font-bold text-primary group-hover:text-secondary transition-colors">MIDNIGHT ROAST</h4>
+<p class="text-sm font-medium text-on-surface-variant">Dark Roast • Sumatra</p>
+</div>
+<span class="font-headline font-bold text-lg">$22.00</span>
+</div>
+<button class="mt-4 flex items-center justify-center gap-2 py-3 border-2 border-primary rounded-full font-bold text-xs uppercase tracking-widest opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined text-sm">shopping_bag</span> Add to Cart
+                        </button>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative flex flex-col cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low relative mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 custom-spring group-hover:scale-110 group-hover:opacity-0" data-alt="Artisanal white linen coffee storage bag with hand-stamped logo on a rustic wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVFYFk72BVkrQ46wIcVosXh7dIaYzVI3JQCa9ZcbY7XQrPpWWxEF4c8AYqs46BjAn8g4QkDA8S_jJRnyh1wZdsCuxuA1RG-T7YlOP1fSYtmS-5W6KIDlIAmU-KoA4q6jBHhMglXnRYMttiYjPLXe7yqw8mtUxo9yW-zEIkbYE9HIWYIbV9HMZlimAUElKjI8W5CxZ2z49yAlnpg5AVPYU1nuFlXu2CK8hWU4jsrgEtcIRS40iaLnyx2C-S4sw1H2SDSKKkr2gNhuOl"/>
+<img class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100 scale-105" data-alt="Interior of a modern industrial coffee shop with warm Edison bulbs and minimal seating" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAijxOtWyl-yD9XbugCexOiy7WZmAK1CX7RewGrLheP9V8k_bgW9mYBJ8Jz38wSADsbtagXRlhy6YIzpQkIoiaAS2BybeaOkf-jBFJUDz4HQRN-BI3wrsZqXD6R6sjS-mCSiT2tiKQfCEd7pBjLXVRsuEpaiocuW4yvkZImPhaZZXZPejvTq2B14anclnLw3SeUwRG9ZM7EBx1eO7oG4-mb6Uh2G0DvVrgjT-AiyoddKDUhSbdPIqXTLSGx1eECobOHkaXh15htzlTw"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-xl font-bold text-primary group-hover:text-secondary transition-colors">VALLEY MIST</h4>
+<p class="text-sm font-medium text-on-surface-variant">Medium Roast • Colombia</p>
+</div>
+<span class="font-headline font-bold text-lg">$26.00</span>
+</div>
+<button class="mt-4 flex items-center justify-center gap-2 py-3 border-2 border-primary rounded-full font-bold text-xs uppercase tracking-widest opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined text-sm">shopping_bag</span> Add to Cart
+                        </button>
+</div>
+<!-- Product Card 4 (Merch) -->
+<div class="group relative flex flex-col cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low relative mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 custom-spring group-hover:scale-110 group-hover:opacity-0" data-alt="Heavyweight cotton cream colored t-shirt with a bold geometric orange coffee bean graphic on the front" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGQI3_43wvzNH4lftrZup4v_2uZ50IFwgpV0Srjzen9v57S9Ey4TsnGARIhQwpwuTyOdNo70_HsqIolA5DHHMgqdjnpxQ6plz7H-k9XywIGexUBl7wOSBQc_9w1O5uWCTSKAurDISLXTxLDmZZjGUzivQofvjuZ7JjtOBfVvIwP4A1OPOL3TjnjtpHAAAJA4y5kPr_ETpdkYeoyHn8yTM9WejxQx7IHpriOVOViofHoNE5exKB4vMtyl0YDTMVZxeCVaQuHbwYfIam"/>
+<img class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100 scale-105" data-alt="Model wearing a designer streetwear t-shirt in an urban concrete setting with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5soGwRszowSvufjbrkfMceZpmVxvD-9ynlAGLDB6BqJH1zKHX7kr1TMwLEUT4P2t22XW961oxw8dk6TfPisrLw-6hwD-fU_2RiOv3d55MsgJFFdNyggW073AzlsGGD4iu6bdPNfsRrSTRu95qhuVDprJzQVZXSYTqW7pRuXwA-swm6WEvRb9hvspItHGyyOoMxnJduN7I2kJzto11Q0hg2UsGOW6t0DH42X7aNt7J1JddQzBk8izAh2EALkJ4tGwZDFXNvMzDTln8"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-xl font-bold text-primary group-hover:text-secondary transition-colors">THE FOUNDRY TEE</h4>
+<p class="text-sm font-medium text-on-surface-variant">Merchandise • Boxy Fit</p>
+</div>
+<span class="font-headline font-bold text-lg">$38.00</span>
+</div>
+<button class="mt-4 flex items-center justify-center gap-2 py-3 border-2 border-primary rounded-full font-bold text-xs uppercase tracking-widest opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined text-sm">shopping_bag</span> Add to Cart
+                        </button>
+</div>
+<!-- Product Card 5 -->
+<div class="group relative flex flex-col cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low relative mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 custom-spring group-hover:scale-110 group-hover:opacity-0" data-alt="Sleek silver metal travel tumbler with laser engraved logo standing in a sunlit modern kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwJF1OvN8FhK2RIVybHyXHUHjf4PnKsGxyJ-p1eWURrZ34ifPIaD-JVeRc6FtMp6Nr_FxbfyVLhKtlwu-cC29U8owMc8oycCmfL4UNj-6Sa0J0y3K5dpyiWdUOVd15iqqMXStqCBDFfYYkhjeB4DwSTlAW-UbeMcnQBD49xI1eR9Equnbdn_CxvRYPpSktcQsrpAvfr_MY1B3-mHbu22hBk3JQ7nOoD2Jwae1B-B1e1yyujfAhohyDKOX_350a6KuDbPvxPV4DyO2f"/>
+<img class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100 scale-105" data-alt="Close up of a stainless steel tumbler lid with steam rising from the opening" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwzUj48MxchSsgOFGQzlLlhFYyKtWOShD8CmTsZ7HjcJfN_w2MJT0Qhzm7ggcCRCmAbgO8oGHCsZoNhpxVaYkUJwk8VzxXE2jhlVEG2cNkTPk1N1UgUpf_0NyILG4lanYyixoK6ePhzJdHWq1tLSl5Bn0KjHnGliVNMGLDR7Tbf0y25sZN9rp-h0GDYC_unzsLHClqdjxoo9_xIsZ1nePNzTOh1z6-yQ16gX-5AKLFwrMrGJNrmySOf3qkO5VVTGx641_bC-OMxZAa"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-xl font-bold text-primary group-hover:text-secondary transition-colors">TRAIL TUMBLER</h4>
+<p class="text-sm font-medium text-on-surface-variant">Merchandise • Insulated</p>
+</div>
+<span class="font-headline font-bold text-lg">$45.00</span>
+</div>
+<button class="mt-4 flex items-center justify-center gap-2 py-3 border-2 border-primary rounded-full font-bold text-xs uppercase tracking-widest opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined text-sm">shopping_bag</span> Add to Cart
+                        </button>
+</div>
+<!-- Product Card 6 (Bento-style featured) -->
+<div class="group relative flex flex-col cursor-pointer sm:col-span-1 lg:col-span-1">
+<div class="aspect-[4/5] overflow-hidden rounded-xl bg-primary relative mb-4 grain-overlay">
+<div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center text-white z-10">
+<span class="material-symbols-outlined text-4xl mb-4 text-secondary-container" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h3 class="font-headline text-2xl font-bold mb-2">SAMPLE PACK</h3>
+<p class="text-xs uppercase tracking-widest font-bold text-stone-400 mb-6">4 x 100G ROASTS</p>
+<span class="text-secondary-container font-headline text-3xl font-bold">$32.00</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-80"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-xl font-bold text-primary group-hover:text-secondary transition-colors">THE DISCOVERY KIT</h4>
+<p class="text-sm font-medium text-on-surface-variant">Variety Pack • All Roasts</p>
+</div>
+</div>
+<button class="mt-4 flex items-center justify-center gap-2 py-3 border-2 border-primary rounded-full font-bold text-xs uppercase tracking-widest opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined text-sm">shopping_bag</span> Add to Cart
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Subscription CTA Banner (Asymmetric Layout) -->
+<section class="max-w-7xl mx-auto px-6 mb-24">
+<div class="bg-primary-container rounded-3xl overflow-hidden relative grain-overlay flex flex-col md:flex-row min-h-[400px]">
+<div class="p-12 md:p-20 flex-1 z-10">
+<h2 class="font-headline text-5xl md:text-7xl font-bold text-white leading-[0.9] mb-8">
+                    NEVER RUN<br/><span class="text-secondary-container">DRY AGAIN</span>
+</h2>
+<p class="text-on-primary-container max-w-md text-lg mb-10">
+                    Save 15% on every bag and get exclusive access to small-batch micro-lots when you subscribe.
+                </p>
+<button class="bg-secondary-container text-on-secondary-fixed px-10 py-5 rounded-full font-headline font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform">
+                    Build Your Subscription
+                </button>
+</div>
+<div class="flex-1 relative h-64 md:h-auto">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Steam rising from a freshly brewed cup of black coffee on a dark industrial countertop with shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvI2I1TmdXFdAHUv59UaP0YxTSY1wPuRHrY-2cHhfl6xVFTkziN2Bk0B7LuPJ107b7jyXwU5QTTFjxSgNb6JirxbxdA1yvQJaN7BvT1s52DOyBnohvRkQJPW7qBsRThxZ_xQAzOpGrcJIFzAJE6AlwXVWhIKr4F3VkkW3Ne9G0E1qOhKDnyb-iD89gm9Yk22sXbLhFbJDcDE74Pl7pgTfb9hvLlfn4fFE7yAf31KAfNits7YGK23OHEou-4yUFoi11uleISxiQYBv_"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container via-primary-container/40 to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#2C1B18] text-stone-400">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 w-full max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<span class="text-3xl font-black text-stone-50 mb-4 block font-headline">DEOMALI</span>
+<p class="text-sm leading-relaxed mb-6">Roasted for those who chase the dawn. Crafted in the heart of the mountains.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors">alternate_email</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors">camera</span>
+</div>
+</div>
+<div>
+<h4 class="text-stone-50 font-bold uppercase tracking-widest text-xs mb-6">Shop</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 inline-block" href="#">All Coffee</a></li>
+<li><a class="hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Brewing Gear</a></li>
+<li><a class="hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Apparel</a></li>
+<li><a class="hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Bundles</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-stone-50 font-bold uppercase tracking-widest text-xs mb-6">Resources</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Brew Guides</a></li>
+<li><a class="hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Wholesale</a></li>
+<li><a class="hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Shipping Policy</a></li>
+<li><a class="hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Our Story</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-stone-50 font-bold uppercase tracking-widest text-xs mb-6">Newsletter</h4>
+<p class="text-xs mb-4">Join the club for early drop access.</p>
+<div class="flex gap-2">
+<input class="bg-primary border-none focus:ring-2 focus:ring-[#FE5E1E] text-stone-50 rounded-lg text-sm w-full py-3 px-4" placeholder="email@address.com" type="email"/>
+<button class="bg-[#FE5E1E] text-[#390C00] p-3 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-[10px] tracking-widest font-headline font-bold">© 2024 DEOMALI COFFEE. BREWED FOR THE BOLD.</span>
+<div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest">
+<a class="hover:text-[#FE5E1E]" href="#">Privacy</a>
+<a class="hover:text-[#FE5E1E]" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>

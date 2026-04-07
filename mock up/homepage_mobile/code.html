@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#57423e",
+                    "error": "#ba1a1a",
+                    "surface-container": "#efefd7",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#705955",
+                    "inverse-surface": "#303221",
+                    "primary-fixed-dim": "#dec0bb",
+                    "primary": "#100403",
+                    "on-tertiary-fixed-variant": "#005307",
+                    "on-tertiary-container": "#349a30",
+                    "error-container": "#ffdad6",
+                    "background": "#fbfbe2",
+                    "tertiary": "#000a00",
+                    "on-surface": "#1b1d0e",
+                    "on-primary-fixed": "#281714",
+                    "outline-variant": "#d3c3c0",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e4e4cc",
+                    "on-secondary-fixed": "#390c00",
+                    "primary-container": "#2c1b18",
+                    "on-secondary-fixed-variant": "#832700",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#dec0bb",
+                    "on-primary-container": "#9b817c",
+                    "tertiary-fixed-dim": "#77dd6a",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dbdcc3",
+                    "on-surface-variant": "#4f4442",
+                    "primary-fixed": "#fbdcd6",
+                    "secondary-fixed": "#ffdbcf",
+                    "surface-container-high": "#eaead1",
+                    "surface-bright": "#fbfbe2",
+                    "outline": "#817472",
+                    "surface": "#fbfbe2",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1d0e",
+                    "secondary-fixed-dim": "#ffb59c",
+                    "tertiary-fixed": "#92fa83",
+                    "surface-container-highest": "#e4e4cc",
+                    "on-tertiary-fixed": "#002201",
+                    "secondary-container": "#fe5e1e",
+                    "inverse-on-surface": "#f2f2d9",
+                    "surface-container-low": "#f5f5dc",
+                    "secondary": "#ab3600",
+                    "tertiary-container": "#002601",
+                    "on-secondary-container": "#551600",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBuB_edp2qDFkRX1hvSi6iHhY7JGs9tNvQ-Na_ttIoKxI4rAOrNjXRzzKE7nWqx3sDfw_-Amlg5AzOoagPfis6eJW3zcIMmCZ6RHqbbG-Af6PXQ25FB1TGoo5ROLCuawLL7_PprP796-TuVa4cgJlxBaiKVqXDtzZsJ4nK-9qDZ08U1qGIIj5MlsXt4nhWy8xd0hu9z5db6AbP_QYiVdAgVbfXumjIEhoZ9dLCVpMkV1ViW29AXcCKzA1LCa_WaS7YoMMCcelrPGUA4);
+    opacity: 0.05
+    }
+.glass-blur {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px)
+    }
+.text-editorial {
+    letter-spacing: -0.02em
+    }
+::-webkit-scrollbar {
+    display: none
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface overflow-x-hidden">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#FBFBE2]/80 dark:bg-[#100403]/80 backdrop-blur-xl flex justify-between items-center px-6 h-16 shadow-[0px_20px_40px_rgba(44,27,24,0.08)]">
+<span class="material-symbols-outlined text-[#100403] dark:text-[#FBFBE2] hover:opacity-70 transition-opacity">menu</span>
+<h1 class="font-['Space_Grotesk'] font-black tracking-widest text-xl text-[#100403] dark:text-[#FBFBE2]">DEOMALI</h1>
+<span class="material-symbols-outlined text-[#100403] dark:text-[#FBFBE2] hover:opacity-70 transition-opacity">shopping_bag</span>
+</nav>
+<main class="pt-16 pb-24">
+<!-- Hero Section: The Peak -->
+<section class="relative h-[751px] w-full overflow-hidden flex flex-col justify-end px-6 pb-12">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Cinematic wide shot of misty mountain peaks at sunrise with deep orange light reflecting on clouds and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW9aCiQkSNuX_aGBGjQGk8W7FEeYm_oojkOcpO98oLi0HR9d7jjCicHyQZuiNuTtkSntO89smUHs7vMBJFWVO3Y1m1LTmwKoXyB0HhqX38E5FKpcRIWFDv4qXBeDf9SkN43vMmTt3d48EJEMTGLoFFPdd-L-vHRJ5zzoVdTwgkSzoKCXjzDELmtVRjCQi9eOqijoHOBUVbqMOtbxC59Y4ESBCcCF54j1NE7IWyvzx6L1jVr5G5_l9uVTXnz-Wcl9UdGdbIQZGXWYgQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent"></div>
+</div>
+<div class="relative z-10">
+<div class="inline-block px-4 py-1 rounded-full border border-secondary/30 bg-surface/10 backdrop-blur-md mb-4">
+<span class="text-secondary-fixed text-xs font-bold tracking-widest uppercase">Altitude: 1670m</span>
+</div>
+<h2 class="font-headline font-black text-6xl text-surface leading-[0.9] text-editorial mb-6">BORN IN THE CLOUDS.</h2>
+<p class="text-surface-container-low text-lg max-w-[80%] mb-8 leading-relaxed opacity-90">Experience the high-altitude roast that redefines the morning ritual. Tactile, raw, and unapologetically bold.</p>
+<div class="flex gap-4">
+<button class="bg-secondary-container text-on-secondary-fixed px-8 py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:scale-105 transition-transform active:scale-95">Shop Beans</button>
+</div>
+</div>
+</section>
+<!-- Current Roasts Carousel (Mobile Horizontal Scroll) -->
+<section class="py-16 bg-surface">
+<div class="px-6 flex justify-between items-end mb-8">
+<div>
+<span class="text-secondary font-bold text-xs uppercase tracking-[0.2em]">Live from the kiln</span>
+<h3 class="font-headline font-bold text-4xl mt-2">CURRENT ROASTS</h3>
+</div>
+<button class="font-label text-xs font-bold uppercase tracking-widest text-secondary border-b-2 border-secondary pb-1">View All</button>
+</div>
+<div class="flex overflow-x-auto gap-6 px-6 snap-x snap-mandatory no-scrollbar">
+<!-- Card 1 -->
+<div class="min-w-[80vw] snap-center">
+<div class="relative h-[400px] rounded-xl overflow-hidden mb-4 bg-primary-container">
+<img class="w-full h-full object-cover opacity-90" data-alt="Matte black coffee bag with minimalist typography sitting on a rough volcanic rock surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOv570i6mIEJrIL_SqmgdYr-TAEgR8Om7bYxqgw3u3TGoMtdsAwllmsLzzb_UB4majzLVBSdyqZXv2j0KEuL7QDAOCU18uZYDxpwyCUvdGw53sP1Cn8mXk6ax81UDyXQAKl7XzyLWQE7nr13JNVTHhrbh-LOug20ns9h9cvKhRTXOoww_fz-HNhD7IY2b0rHbR1wEDecDInrOD75Kve1CGO941nR4bT2frRtalvcdFTcZFNOA_BYZpbF1gtFD8D5XBKejAMvDaXHQU"/>
+<div class="absolute top-4 right-4 bg-surface/90 glass-blur px-3 py-1 rounded-full">
+<span class="font-bold text-[10px] text-primary uppercase">Dark Roast</span>
+</div>
+</div>
+<h4 class="font-headline font-bold text-2xl">OBSIDIAN PEAK</h4>
+<div class="flex justify-between items-center mt-2">
+<span class="text-on-surface-variant text-sm font-medium">Notes of Cacao &amp; Smoke</span>
+<span class="font-headline font-bold text-secondary text-lg">$24.00</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[80vw] snap-center">
+<div class="relative h-[400px] rounded-xl overflow-hidden mb-4 bg-primary-container">
+<img class="w-full h-full object-cover opacity-90" data-alt="Artisanal light coffee bag with orange accents placed on a weathered wooden plank with coffee beans scattered" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUXBjmomRM9Iuve986Majh-8n6muoxfn2GqizJ8LxsiS6QX0XUK3wrh5n7Y1NC3bVVTtMd-dJkqTTl5nMMr5uEdBf6YtjCIvnx5TJqs-3h2qxLrSCnAxX61koBMbv6HDJuAiZIwaGXJ0nQE3YJqBm_36sAU4ZGMbFm9ksRM32utYR_86qHVuyCUPpmiqhRmq29Mb3qBCxPdPV94LS99-VTNTUTqow2S4jYw_G15vfU01Zu0HObdK2ANlv7Q0WodpNQ0mCCIKn7RZvg"/>
+<div class="absolute top-4 right-4 bg-surface/90 glass-blur px-3 py-1 rounded-full">
+<span class="font-bold text-[10px] text-primary uppercase">Light Roast</span>
+</div>
+</div>
+<h4 class="font-headline font-bold text-2xl">SOLAR FLARE</h4>
+<div class="flex justify-between items-center mt-2">
+<span class="text-on-surface-variant text-sm font-medium">Citrus &amp; Wild Honey</span>
+<span class="font-headline font-bold text-secondary text-lg">$28.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- The Story Section: Asymmetric Editorial -->
+<section class="py-20 bg-surface-container-low px-6 relative overflow-hidden">
+<div class="absolute -right-20 top-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex flex-col gap-8">
+<div class="w-2/3 h-64 rounded-xl overflow-hidden self-end shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Extreme close up of coffee beans being roasted in a copper drum with glowing embers and smoke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM1DcqgruNGgyT0BKn2tQaUjQ_-Kxp4KsJ1S6xFF6zjHQS-FpLbhtsya_IMAEI5bp_vfuDhZg9OtQgxrFr0vmzc2Q7iqqvJQ0jw25MRrZgod_uXv6t0rNeRO9zUSCSVM2OOvyfeUIjTtjrPbrpFtgMVFzAPMBX3x9Ur18biOkjUjMSfUzF3B204z6unMOxEMiLHtg7keBvSr3hsuLuBoMrRJGQDNOXpp3B9TB4L9UX8bBQ38C49KKK2upMlJCrQWc-3VP8higdglHt"/>
+</div>
+<div class="flex flex-col gap-4 -mt-16 bg-surface p-8 rounded-xl shadow-xl w-full border-t-4 border-secondary">
+<h3 class="font-headline font-black text-5xl leading-none text-editorial">ROASTED AT THE EDGE.</h3>
+<p class="text-on-surface-variant text-base leading-relaxed">
+                        We don't believe in industrial consistency. We believe in the pulse of the flame and the pressure of the altitude. Deomali beans are forged where the oxygen is thin and the flavor is concentrated.
+                    </p>
+<a class="inline-flex items-center gap-2 font-bold text-secondary uppercase tracking-widest text-xs mt-4" href="#">
+                        Our Process
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="w-full h-80 rounded-xl overflow-hidden mt-4">
+<img class="w-full h-full object-cover" data-alt="Hands of a local farmer cradling raw green coffee cherries in a high altitude plantation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCHv0AhKQWfETVm-zUGOy-impl08zuhuBhGwFhUvTfVqN4eaQBk2p-QdFiKeYs0dvzWpgD987HJjkoJSX1u8F41Dkbtq_16xumDizqIAsDQKruAIsiXiwYg--T4AldoVmXp8aKwe8YpXSXchrzHnWi1yOS4HZnsSHQZTCiQPRVaEL71RPMa1ix0S_Ww7Wy7PshBIhL1ZOcj_0xPg2jS7DSsxjNGecb0pfJWbhC1OX091xwRkFZGcAdnvZ8SwedlSdPqkLKqSvqKWN8"/>
+</div>
+</div>
+</section>
+<!-- Subscription Section: Brutalist Block -->
+<section class="p-6">
+<div class="bg-primary-container rounded-[2rem] p-8 relative overflow-hidden">
+<div class="grain-overlay absolute inset-0"></div>
+<div class="relative z-10">
+<h3 class="font-headline font-bold text-4xl text-surface mb-4 leading-tight">NEVER RUN DRY.</h3>
+<p class="text-on-primary-container mb-8">Save 15% on monthly deliveries of our peak-harvest micro-lots. Cancel anytime, brew forever.</p>
+<div class="flex flex-col gap-4">
+<div class="bg-surface/10 backdrop-blur-md rounded-full p-1 pl-6 flex items-center border border-surface/20">
+<input class="bg-transparent border-none focus:ring-0 text-surface placeholder:text-surface/50 w-full font-label text-sm" placeholder="Your email..." type="email"/>
+<button class="bg-secondary-container text-on-secondary-fixed w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<p class="text-[10px] text-on-primary-container text-center uppercase tracking-widest opacity-60">Join 12,000+ Roasters</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#100403] dark:bg-[#000A00] w-full pt-12 pb-32 px-6 flex flex-col items-center gap-6 text-center shadow-none">
+<h2 class="font-['Space_Grotesk'] font-bold text-[#FE5E1E] text-3xl tracking-tighter">DEOMALI</h2>
+<div class="flex gap-6">
+<a class="font-['Manrope'] text-xs tracking-widest text-[#F5F5DC]/60 hover:text-[#FE5E1E] transition-colors" href="#">Sourcing</a>
+<a class="font-['Manrope'] text-xs tracking-widest text-[#F5F5DC]/60 hover:text-[#FE5E1E] transition-colors" href="#">Brew Guides</a>
+<a class="font-['Manrope'] text-xs tracking-widest text-[#F5F5DC]/60 hover:text-[#FE5E1E] transition-colors" href="#">Contact</a>
+</div>
+<p class="font-['Manrope'] text-[10px] tracking-[0.2em] text-[#F5F5DC]/40 uppercase mt-4">© 2024 DEOMALI ROASTERS</p>
+</footer>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-8 pb-6 pt-3 bg-[#FBFBE2]/90 dark:bg-[#100403]/90 backdrop-blur-md rounded-t-[2rem] z-50 shadow-[0px_-10px_30px_rgba(44,27,24,0.05)]">
+<a class="flex items-center justify-center bg-[#FE5E1E] text-[#FBFBE2] rounded-full w-12 h-12 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+</a>
+<a class="flex items-center justify-center text-[#2C1B18] dark:text-[#F5F5DC] w-12 h-12 hover:scale-110 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">explore</span>
+</a>
+<a class="flex items-center justify-center text-[#2C1B18] dark:text-[#F5F5DC] w-12 h-12 hover:scale-110 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">local_fire_department</span>
+</a>
+<a class="flex items-center justify-center text-[#2C1B18] dark:text-[#F5F5DC] w-12 h-12 hover:scale-110 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
+</nav>
+</body></html>

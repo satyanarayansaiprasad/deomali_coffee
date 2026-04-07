@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCSqzGjixyZCS3UFZDZQyz9upfyt2Z3XXbPnbqYTGTPxHxAg-9U8NzFDnuOjg2bvl0TG3IfbAwDl_gwdSXdlybAdR6GTMcSgpWY9fIjn6OOjegFTHoPWLiIO1Ff_pT8kSFWYt6k1BIH4f0UoHpv9RQjVkw0zmQGWyqkhl27rO7pi1fz26K4uGTjHitS77_RVXTCGLpcl-LdxYz0sb8jR-J9dKPBvTKj9NMT-J94PaDwxO1yoDD4gbq5_XLB5y82T3huSoC3-wvlz46y);
+    opacity: 0.05;
+    pointer-events: none;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-xl bg-surface/80;
+  }
+
+  .custom-spring {
+    transition-timing-function: cubic-bezier(0.4, 0.1, 0.3, 1.5);
+  }
+}
+
+/* Custom spacing and typography rules from Design System */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+}
+
+.heading-tight {
+  letter-spacing: -0.02em;
+}

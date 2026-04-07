@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#57423e",
+                    "error": "#ba1a1a",
+                    "surface-container": "#efefd7",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#705955",
+                    "inverse-surface": "#303221",
+                    "primary-fixed-dim": "#dec0bb",
+                    "primary": "#100403",
+                    "on-tertiary-fixed-variant": "#005307",
+                    "on-tertiary-container": "#349a30",
+                    "error-container": "#ffdad6",
+                    "background": "#fbfbe2",
+                    "tertiary": "#000a00",
+                    "on-surface": "#1b1d0e",
+                    "on-primary-fixed": "#281714",
+                    "outline-variant": "#d3c3c0",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e4e4cc",
+                    "on-secondary-fixed": "#390c00",
+                    "primary-container": "#2c1b18",
+                    "on-secondary-fixed-variant": "#832700",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#dec0bb",
+                    "on-primary-container": "#9b817c",
+                    "tertiary-fixed-dim": "#77dd6a",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dbdcc3",
+                    "on-surface-variant": "#4f4442",
+                    "primary-fixed": "#fbdcd6",
+                    "secondary-fixed": "#ffdbcf",
+                    "surface-container-high": "#eaead1",
+                    "surface-bright": "#fbfbe2",
+                    "outline": "#817472",
+                    "surface": "#fbfbe2",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1d0e",
+                    "secondary-fixed-dim": "#ffb59c",
+                    "tertiary-fixed": "#92fa83",
+                    "surface-container-highest": "#e4e4cc",
+                    "on-tertiary-fixed": "#002201",
+                    "secondary-container": "#fe5e1e",
+                    "inverse-on-surface": "#f2f2d9",
+                    "surface-container-low": "#f5f5dc",
+                    "secondary": "#ab3600",
+                    "tertiary-container": "#002601",
+                    "on-secondary-container": "#551600",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.grain-overlay {
+    position: relative
+    }
+.grain-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCbQIgSPSCWa7RvasxvUDpUrxNvFW2OqlW3LZNYDFK6dJjLc4d9Td51jWjOk4boYUWAFLM0i7G7CaJTk2P19MqwlDw2xhx19aeiqDfGtlZne4pUwPXhLUJKFbQQkpuwIYxxe_Ze0aemQjyN8mznsNc8v9-PRQXgRVbIP_XtfeiBbdOw0YYA9V4Q6AUhGnXFUJI_70bNjkyq32xd8NPF4yE-kM4kGnK1ecuuXjNSfeEZAuGi4sO2QWkYHpLWx9NFX4EOhL7tBxtN6Xej);
+    opacity: 0.05;
+    pointer-events: none
+    }
+.glass-blur {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px)
+    }
+    body {
+      min-height: 100dvh;
+      overflow-x: hidden;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar (Android Native Style) -->
+<header class="bg-surface/90 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-outline-variant/10">
+<div class="flex justify-between items-center px-4 h-14 w-full">
+<div class="flex items-center gap-4">
+<button class="text-on-surface w-10 h-10 flex items-center justify-center rounded-full active:bg-on-surface/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-lg font-black tracking-widest text-primary font-headline">DEOMALI</h1>
+</div>
+<div class="flex items-center gap-1">
+<button class="text-on-surface w-10 h-10 flex items-center justify-center rounded-full active:bg-on-surface/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-on-surface w-10 h-10 flex items-center justify-center rounded-full active:bg-on-surface/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-14 pb-28">
+<!-- App Story / Immersive Feed Gallery -->
+<section class="mt-4">
+<div class="flex overflow-x-auto gap-3 px-4 pb-2 hide-scrollbar snap-x snap-mandatory">
+<!-- Story Item 1 (The Flagship) -->
+<div class="flex-shrink-0 w-72 h-[420px] relative rounded-[2rem] overflow-hidden snap-center grain-overlay group shadow-lg">
+<img class="w-full h-full object-cover" data-alt="dramatic wide angle of a modern brutalist cafe interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChzsnRQYRVVxm-1kAAfDV-_Gem9xDpr0bPLaIRuetaWixHC1oR6JJYZkV8RBEKEjEYxUKdWs3XksM8omkwdjcFUHClFhf_BbQoWdhwWoIPFZMiWCfzo5tXv_m3tjkouRgZz8pXUAO130J46FUXpuScD1pevIqrsA7T9YAb2sGnCbW0uLJzIcdrhobPD66fuvWwtRFpgTVQTa4S4O4N6V6xZ2Usx4s57iK_gkJSegvT8vll0svtexlN-ProZsKqiVz3gR6EZ_4pjUZP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="inline-block px-3 py-1 bg-secondary text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-3">The Flagship</span>
+<h2 class="font-headline text-3xl font-bold text-white tracking-tighter leading-none mb-2">Urban Roastery</h2>
+<p class="text-white/70 text-xs font-light">Where raw ritual meets electric energy.</p>
+</div>
+</div>
+<!-- Story Item 2 (The Craft) -->
+<div class="flex-shrink-0 w-72 h-[420px] relative rounded-[2rem] overflow-hidden snap-center grain-overlay group shadow-lg">
+<img class="w-full h-full object-cover" data-alt="close up of a professional espresso machine" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqJOS9r6evNZ9vNZ5cSFQDQFbZvlPZ1qO4De-WjTqqMFRI5LOD3_B18M70YA4BsJIYMG11qPkuLS-WSMwy3tsn13myKl9y646Z0sS-vT092bP862K3wO__hq4wuCdOFB8y0OfLGrMecPtma73B74RUNM_fOOWye0gAU9moL04L7SQJnci7lI1mSbnayT2O8N_0uwYIdhPkdovn2gTi9WowG1_zsG25c-HR2XgbhPtz2elJtWbVyPXjxmpTkVzZZPOomdLkPKtgGbJS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="inline-block px-3 py-1 bg-surface-variant text-on-surface-variant text-[10px] font-bold uppercase tracking-widest rounded-full mb-3">The Craft</span>
+<h2 class="font-headline text-3xl font-bold text-white tracking-tighter leading-none mb-2">Neon Precision</h2>
+<p class="text-white/70 text-xs font-light">Every shot, measured to the micro-gram.</p>
+</div>
+</div>
+<!-- Story Item 3 (Sensory) -->
+<div class="flex-shrink-0 w-72 h-[420px] relative rounded-[2rem] overflow-hidden snap-center grain-overlay group shadow-lg">
+<img class="w-full h-full object-cover" data-alt="artistic pour over coffee" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApPC-54Ff4EVOtwvHH0tRc0jKh-iPk7ur0jqamj4fkKAc7e284llMOzXFz1lnS6MUGLWEgGppiPyp0rlL3dbAY-WNixrjF5PP0TGRrxqD1g2HxiOA-El6i4EnFwt3XiWxXuxayAZytSy9bgJvpSSmJc1iKXZcEbhpy_AsBGSMcGORUzzbxcrl4GqlUEJbMUCG6gJpfk6hYI2RmudLlDWEygY0a7xnlUnh60f8PLgMym4i4dJL9uyiMu1-O_7vcrHNw6M93xbIAZ1Sv"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="inline-block px-3 py-1 bg-secondary text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-3">The Ritual</span>
+<h2 class="font-headline text-3xl font-bold text-white tracking-tighter leading-none mb-2">Cloud Pour</h2>
+<p class="text-white/70 text-xs font-light">Ethereal coffee for the modern soul.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Native Style List: Daily Brews -->
+<section class="mt-10 px-4">
+<div class="flex justify-between items-center mb-4">
+<div>
+<h3 class="font-headline text-2xl font-bold tracking-tight text-primary">Daily Brews</h3>
+<p class="text-secondary font-bold text-[10px] uppercase tracking-widest">Limited Selection</p>
+</div>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full font-label text-xs font-bold uppercase tracking-widest shadow-sm active:scale-95 transition-transform">
+        View Menu
+    </button>
+</div>
+<div class="bg-surface-container-low rounded-3xl overflow-hidden border border-outline-variant/20">
+<!-- List Item 1 -->
+<div class="flex items-center justify-between p-4 border-b border-outline-variant/10 active:bg-surface-variant transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-lg" data-icon="coffee">coffee</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-primary">Neon Espresso</h4>
+<p class="text-[11px] text-on-surface-variant">Double Shot / Citrus Notes</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline font-bold text-primary">$4.50</span>
+<span class="text-[9px] text-secondary font-bold">HOT / COLD</span>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex items-center justify-between p-4 border-b border-outline-variant/10 active:bg-surface-variant transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-lg" data-icon="local_fire_department">local_fire_department</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-primary">Signature Cold Brew</h4>
+<p class="text-[11px] text-on-surface-variant">18-Hour Steep / Cacao Finish</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline font-bold text-primary">$6.00</span>
+<span class="text-[9px] text-secondary font-bold">NITRO</span>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex items-center justify-between p-4 active:bg-surface-variant transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg" data-icon="water_drop">water_drop</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-primary">Cloud Oat Latte</h4>
+<p class="text-[11px] text-on-surface-variant">Frosted Glass Serve / Organic</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline font-bold text-primary">$5.50</span>
+<span class="text-[9px] text-secondary font-bold">OAT</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Card (Primary CTA Focus) -->
+<section class="mt-10 px-4">
+<div class="bg-primary text-background rounded-[2.5rem] p-6 grain-overlay overflow-hidden relative shadow-xl">
+<div class="relative z-10">
+<h3 class="font-headline text-2xl font-bold tracking-tight mb-1">Visit the Lab</h3>
+<p class="text-background/60 text-xs mb-6">Open daily 07:00 — 19:00 for the devoted.</p>
+<div class="flex flex-col gap-3 mb-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-container text-lg" data-icon="location_on">location_on</span>
+</div>
+<span class="text-[13px] font-medium">88 Brutalist Way, Arts District</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-container text-lg" data-icon="phone">phone</span>
+</div>
+<span class="text-[13px] font-medium">+1 (555) DEOMALI</span>
+</div>
+</div>
+<button class="w-full bg-secondary text-white py-4 rounded-2xl font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-2 shadow-lg active:scale-[0.98] transition-all">
+                        Get Directions
+                        <span class="material-symbols-outlined text-sm" data-icon="directions">directions</span>
+</button>
+</div>
+<!-- Map Background -->
+<div class="mt-6 rounded-2xl h-40 w-full overflow-hidden grayscale contrast-125 opacity-30 relative">
+<img class="w-full h-full object-cover" data-alt="a stylized dark-themed map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClJKAiUDmovLOcpYsPt5QFM2oV10u09ra1g3FzMcZjIzJpL0VAznZUlgGm1QkOzvt0fNvCdpcKYGuLrs3d-uJsyTHlVRYDdNK1ouBPr7FqX1Ui2CNKtWJZGBRPOV_MgbX5Qa3VfQvBGSIZYQZUWmIT7N2nBkCL6AAvl3tfj5Epd9KvpJiDltv5BJtiCU9HXhdsY1fs6rMfaCVPMxiA-yXeCOpGtQmmtXvdZ59o6m_5ka5bUBWYw6G9kFX6vm1Db3EMEYgOOsdJ2r7N"/>
+<div class="absolute inset-0 bg-gradient-to-b from-primary via-transparent to-primary"></div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary pt-12 pb-12 px-6 flex flex-col items-center gap-6 text-center mt-12 border-t border-outline-variant/5">
+<span class="font-headline font-bold text-secondary text-xl tracking-widest">DEOMALI</span>
+<div class="flex gap-6">
+<a class="text-[10px] tracking-widest text-background/40 hover:text-secondary transition-colors" href="#">Sourcing</a>
+<a class="text-[10px] tracking-widest text-background/40 hover:text-secondary transition-colors" href="#">Brew Guides</a>
+<a class="text-[10px] tracking-widest text-background/40 hover:text-secondary transition-colors" href="#">Legal</a>
+</div>
+<p class="text-[10px] tracking-widest text-background/20">© 2024 DEOMALI ROASTERS</p>
+</footer>
+</main>
+<!-- Persistent Bottom Navigation Bar (Android M3 Style) -->
+<nav class="bg-surface/95 backdrop-blur-md fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-3 border-t border-outline-variant/10 z-[100]">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant/60 w-16" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="home">home</span>
+<span class="text-[10px] font-bold tracking-tight">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary w-16 relative" href="#">
+<div class="absolute -top-1 w-12 h-8 bg-secondary-container/20 rounded-full -z-10"></div>
+<span class="material-symbols-outlined text-[22px]" data-icon="coffee" style="font-variation-settings: 'FILL' 1">coffee</span>
+<span class="text-[10px] font-black tracking-tight">Roastery</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant/60 w-16" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="explore">explore</span>
+<span class="text-[10px] font-bold tracking-tight">Visit</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant/60 w-16" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="account_circle">account_circle</span>
+<span class="text-[10px] font-bold tracking-tight">Account</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#fbfbe2",
+              "secondary": "#ab3600",
+              "tertiary-fixed-dim": "#77dd6a",
+              "on-tertiary-fixed": "#002201",
+              "inverse-on-surface": "#f2f2d9",
+              "on-primary-fixed-variant": "#57423e",
+              "tertiary-container": "#002601",
+              "primary-fixed-dim": "#dec0bb",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              "surface-container-low": "#f5f5dc",
+              "on-background": "#1b1d0e",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#390c00",
+              "secondary-fixed-dim": "#ffb59c",
+              "secondary-container": "#fe5e1e",
+              "on-primary": "#ffffff",
+              "surface-bright": "#fbfbe2",
+              "primary-fixed": "#fbdcd6",
+              "error": "#ba1a1a",
+              "on-primary-fixed": "#281714",
+              "tertiary": "#000a00",
+              "on-primary-container": "#9b817c",
+              "inverse-primary": "#dec0bb",
+              "on-tertiary-container": "#349a30",
+              "tertiary-fixed": "#92fa83",
+              "on-surface-variant": "#4f4442",
+              "surface-tint": "#705955",
+              "on-secondary-fixed-variant": "#832700",
+              "surface-dim": "#dbdcc3",
+              "on-error-container": "#93000a",
+              "on-secondary-container": "#551600",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#e4e4cc",
+              "primary": "#100403",
+              "surface-container-highest": "#e4e4cc",
+              "outline": "#817472",
+              "outline-variant": "#d3c3c0",
+              "primary-container": "#2c1b18",
+              "on-surface": "#1b1d0e",
+              "surface-container-high": "#eaead1",
+              "on-tertiary-fixed-variant": "#005307",
+              "surface": "#fbfbe2",
+              "secondary-fixed": "#ffdbcf",
+              "surface-container": "#efefd7",
+              "error-container": "#ffdad6",
+              "inverse-surface": "#303221"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCSqzGjixyZCS3UFZDZQyz9upfyt2Z3XXbPnbqYTGTPxHxAg-9U8NzFDnuOjg2bvl0TG3IfbAwDl_gwdSXdlybAdR6GTMcSgpWY9fIjn6OOjegFTHoPWLiIO1Ff_pT8kSFWYt6k1BIH4f0UoHpv9RQjVkw0zmQGWyqkhl27rO7pi1fz26K4uGTjHitS77_RVXTCGLpcl-LdxYz0sb8jR-J9dKPBvTKj9NMT-J94PaDwxO1yoDD4gbq5_XLB5y82T3huSoC3-wvlz46y);
+    opacity: 0.05;
+    pointer-events: none
+    }
+.glass-effect {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px)
+    }
+.custom-spring {
+    transition-timing-function: cubic-bezier(0.4, 0.1, 0.3, 1.5)
+    }</style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<div class="fixed inset-0 grain-overlay z-[100]"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-[#100403]/80 backdrop-blur-xl shadow-[0px_20px_40px_rgba(44,27,24,0.08)]">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-[#100403] dark:text-stone-50">
+                Deomali Coffee
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-['Space_Grotesk'] font-bold tracking-tight text-sm uppercase">
+<a class="text-[#AB3600] dark:text-[#FE5E1E] border-b-2 border-[#AB3600] pb-1 hover:opacity-80 transition-opacity duration-300" href="#">Shop</a>
+<a class="text-[#100403] dark:text-stone-300 hover:text-[#AB3600] hover:opacity-80 transition-opacity duration-300" href="#">About</a>
+<a class="text-[#100403] dark:text-stone-300 hover:text-[#AB3600] hover:opacity-80 transition-opacity duration-300" href="#">Café</a>
+<a class="text-[#100403] dark:text-stone-300 hover:text-[#AB3600] hover:opacity-80 transition-opacity duration-300" href="#">Subscription</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="scale-95 active:scale-90 transition-transform hover:opacity-80">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[700px] flex items-center overflow-hidden bg-primary">
+<div class="absolute inset-0 z-0">
+<img alt="Brewed at the Peak of Deomali" class="w-full h-full object-cover opacity-60" data-alt="Cinematic close-up of dark roasted coffee beans falling into a pile with dramatic side lighting and a subtle haze" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAyDmu1Y5QPfuQGg_davURhu_3UYRsjz9lFcZOxP-TOwdzT-h2qJsrr_rzQgI2oq5LL7NU7wpqlzaRzAU_XRCMyhO7rH9kIkVYKVVCOTjP5ZF3hexxy5lM2KCD0kVwafLTSeGJ0XJSPRow7P_6A7KjZjXK_N0bldTgNTqjq9dk7xsKw00cYFGbMDHjq-gWm_Br8WgDVdkKLa8ohMTsRmae9cSM6FDJa-maSEer1xN4t3epXOW-M4ttzO6O2wXrdbs0M-KWcqJaqjsI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+<div class="max-w-3xl">
+<h1 class="font-headline text-6xl md:text-9xl font-bold text-surface leading-[0.9] tracking-tighter mb-8">
+                        Brewed at the Peak of <span class="text-secondary-container">Deomali</span>
+</h1>
+<p class="text-xl md:text-2xl text-surface-variant font-light mb-12 max-w-xl leading-relaxed">
+                        Ethically sourced high-altitude beans roasted for those who seek the extraordinary in every morning cup.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<a class="px-10 py-5 bg-secondary-container text-on-secondary-fixed rounded-full font-headline font-bold text-lg text-center custom-spring hover:scale-105 active:scale-95" href="#">
+                            Shop Now
+                        </a>
+<a class="px-10 py-5 border-2 border-surface text-surface rounded-full font-headline font-bold text-lg text-center backdrop-blur-sm hover:bg-surface hover:text-primary transition-colors" href="#">
+                            Visit Café
+                        </a>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+<span class="text-surface-variant text-xs uppercase tracking-[0.3em] font-bold">Scroll</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-secondary-container to-transparent"></div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<span class="text-secondary font-headline font-bold tracking-widest uppercase text-sm block mb-4">The Collection</span>
+<h2 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter">Current Roasts</h2>
+</div>
+<a class="font-label text-sm font-bold uppercase tracking-widest border-b-2 border-secondary pb-1 text-primary hover:text-secondary transition-colors" href="#">View All Roasts</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Product Card 1 -->
+<div class="group relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low mb-6 relative">
+<img alt="Dark Peak Espresso" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Minimalist coffee bag packaging standing on a stone pedestal with soft architectural shadows and warm highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5USisFwXv5eu8Oxy93cVYMkkUHwhxy_r4nda0jjZwxHeYqDehPVH8Op-mH-av6Uj-vYkDU6SCqG6kHnMOBn2sqBG4l93SBrw-nfUBp1bKxzt0-dlHQi0j4MmPkrgdS_nyGYCMzkACW8rIKvmePUOFM0rRBOAEONrmMSooA8X1lFkF9E6eJzlwL2qaY6yntivH42pdmUjJcpfnz_TAo6Ay8klwYn63db2VEe-6Z2aWMu1kQ4d2ijF66cyzIbWEEMZIPPZ1tASG_wb2"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold uppercase tracking-tighter">Dark Roast</div>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-2">Dark Peak Espresso</h3>
+<p class="text-on-surface-variant mb-4">Notes of cacao, smoke, and black cherry.</p>
+<span class="font-headline text-2xl font-black text-secondary">$24.00</span>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative translate-y-8 md:translate-y-16">
+<div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low mb-6 relative">
+<img alt="Mist Valley Light" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Stylish specialty coffee bag with abstract orange graphics on a clean off-white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArvXna4x9ad3nN7hqpmiyP8qh9coWhnFHpe1Eak0WvxlsxGzVN02WLXTO4CHHNuIanQamVZaitMi_1QbgiHQQ3-iykRDMg1DTlcQt5rAAHSxh2hwQ2HA4M6szxtQtcRuPmdU7AeE4X6JwC6QxihY6fO3Z90VNtlhSKaN5r4kjSB8FM_OrJXp7w_PDujB0OMwApd4ye0nTVubWQtgZTjxopvJ7OJCtGCz7Goy84eM4HBaP4lDYfhpgFcdq2VPw0z_0106djOeQ3ixkQ"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold uppercase tracking-tighter">Light Roast</div>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-2">Mist Valley Light</h3>
+<p class="text-on-surface-variant mb-4">Notes of jasmine, lemon zest, and honey.</p>
+<span class="font-headline text-2xl font-black text-secondary">$28.00</span>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low mb-6 relative">
+<img alt="Highland Medium" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Artisanal coffee bag being held by hands against a blurred lush green mountain background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdLD_5YCY6DpMKnmiqbusrjt5cP8oetiq-EMlgOpblXu9K8PEkg6kk3ELAxhEtTDm00LmfaAfdUdDcOzu9XSvm6i2jsEyloGlLK3Vd6ku73VHFXxemU0dJ2kh4pSNyX26TqCR8uB6RZZ4_gwkdXkNAoaOurnZtWZDHnKdX19KKT4aDxr-cDoL9aiYarSCIVtNNbMPuCG80Lv1luflUPx7Ka6UI70QsaHIhXTyrgBz1AlAPWxZHR28zROOnC7TM8yVbScogwKU50feE"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold uppercase tracking-tighter">Medium Roast</div>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-2">Highland Medium</h3>
+<p class="text-on-surface-variant mb-4">Notes of caramel, toasted almond, and red apple.</p>
+<span class="font-headline text-2xl font-black text-secondary">$22.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Story Intro -->
+<section class="py-32 bg-primary text-surface relative overflow-hidden">
+<!-- Abstract background shapes -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-secondary-container/20 rounded-full blur-[120px]"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-tertiary-container/40 rounded-full blur-[120px]"></div>
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="relative z-10 aspect-square rounded-2xl overflow-hidden">
+<img alt="Deomali Peaks" class="w-full h-full object-cover" data-alt="Lush green mountain peaks shrouded in morning mist at first light, serene and atmospheric" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLvIQT3pAJzL1HLc34lnhN-rr57jx0Kl7hXvv5R197NwmNPqRXu1T4FQk3EqXFBYvO-CYtN125eQTbKD9-kGdrJ8wsTgwJ9laZ93f4BaKzB4s_Jq3UwJyc4dNMefSm0HRsFYbJrPDmbzrSMm_87Nx4a4bkqNDPmVJxoJbkDGT96zwOI5izAT-DJtkK_AyrphIN3kQHPGQgk6-MXnbX56Pj-vqsPLnwcamnevXIgpx-B57r796tuxvBULnSeVFyr6R7qwFKmeTNe4lB"/>
+</div>
+<div class="absolute -bottom-10 -right-10 w-2/3 aspect-video bg-surface-container-low/10 backdrop-blur-xl rounded-xl p-8 border border-surface/10 hidden md:block">
+<p class="font-headline text-2xl font-bold text-secondary-container italic">"The altitude changes everything. The air is thinner, the maturation slower, the flavor deeper."</p>
+</div>
+</div>
+<div>
+<span class="text-secondary-container font-headline font-bold tracking-[0.3em] uppercase text-sm block mb-6">Our Origin</span>
+<h2 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter mb-10 leading-[0.9]">Born in the Clouds.</h2>
+<div class="space-y-6 text-lg text-surface-variant leading-relaxed max-w-lg">
+<p>At 1,672 meters, Deomali is the highest peak in the region. Here, the unique microclimate creates coffee cherries that are exceptionally dense and packed with aromatic complexity.</p>
+<p>Our journey began with a simple mission: to respect the peak. We work directly with small-hold farmers to ensure sustainable practices that protect the mountain while delivering the most vibrant roast possible.</p>
+</div>
+<div class="mt-12">
+<a class="inline-flex items-center gap-4 text-surface font-headline font-bold text-xl group" href="#">
+                            Read the Full Story
+                            <span class="material-symbols-outlined text-secondary-container group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Instagram Feed / Social -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 mb-16 text-center">
+<h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tighter mb-4">Follow the Brew @deomalicoffee</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Tag us in your morning ritual for a chance to be featured in our monthly digital gallery.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4 max-w-[1600px] mx-auto">
+<div class="aspect-square rounded-lg overflow-hidden relative group">
+<img alt="Social 1" class="w-full h-full object-cover" data-alt="Vibrant top-down shot of a latte with perfect art next to a steaming espresso machine in a modern cafe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEolK5EAnvrr_kbQMMlV3aVwE-hCM-MU62Wcb2H1QhkbWmcdqLH61rjMGl29zlwzPjHyM3NXgbIAsjRCm7ugSQ0REyT4RahvnrwqYIXlXbcf8rkPh6Qo7dM75bzmH0AVyGVQHeef0kNO0XbW0akH8eQPFEPCB9yqh6BOesXoDq6QjBA5lfoTOW885YRgsUiFH9lnKFcxwl4TsPBGlf7IAG2hqoAoNwc4pN10gJlFWpNm92QElmKR213mwGUTLaAc09RMsIvc3g0vik"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-surface text-4xl" data-icon="favorite" data-weight="fill">favorite</span>
+</div>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden relative group translate-y-8">
+<img alt="Social 2" class="w-full h-full object-cover" data-alt="Close up of coffee beans being manually ground in a high-end brass hand grinder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFSrU1sATAg859_H_OUx5geuSYB7EiFnE8LhzrQHtCMgto2Yqas4pDs-FtLtK-Um-At3f3XlC5JnnBnRMz6uPU23KbRj_MM9cf1esrLC9allVGFGAATVElC9j_VzA5J7Xl0EJatBr7nPSBCLDb9eXRLNQFuPUgz0aloHWStZ3v1IXX61jhlnl92ykBxSfs7kzLBIXfnKgJ3Dr7_GT1zTIoCTa3zEYJS4W5TOxm4MOSwOeIfmz4RLP3kQH5bPty7unnqC6ccZFT71X0"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-surface text-4xl" data-icon="favorite" data-weight="fill">favorite</span>
+</div>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden relative group">
+<img alt="Social 3" class="w-full h-full object-cover" data-alt="Atmospheric shot of a steaming cup of coffee on a wooden table in front of a large window with morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh5konNMSvGYJSon22fFIzy9aP5GVghzlCQaw1oMgCUa9EF2WtbKsOJ2LP7-UOVnDQcqtgFnyorKmPB-ii9BDUGcBvOXvXsRychHEO9o7aDVNm60EGEusAIZTm7bvd_Txwz9uNAp74CxW2BT693u2VG5_Y-od1IJV96d4TFduSj0jjETNNEWI1pGsT7BXSuFyaWDyPKu31tLb-gww5fe31URtmmTL818dlfAM9Mv78Sm8gaQGu0IUAZfK2lnkh8qQ6CozckOokczLi"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-surface text-4xl" data-icon="favorite" data-weight="fill">favorite</span>
+</div>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden relative group translate-y-8">
+<img alt="Social 4" class="w-full h-full object-cover" data-alt="Minimalist aesthetic shot of a glass of cold brew coffee with large ice cubes on a white marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnFUlq1QwnyiRZbfqy_KUdKvrWRBtW_jNgKsEg7gtld8okQfiCyaXR26JfXJDqcO2-E4p57pDohqAban9If-_Tf3ZxIfVcHJnsVKmo2caNYWI9AkLT4L8ikc4fXjstUaz0LvHInMJDc2FAxaQyiY3I36u8CWGqfoNlf50jSlStEY3w1E_sLTPA5NaBPhUcbUMR02fNVTF76Z9ZbmYYD7kHjlM7w0DYuY_o9zW_tjeTZPfSOyUgpPqZVAvO3S0W8cVCOns6RN4K_Kwe"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-surface text-4xl" data-icon="favorite" data-weight="fill">favorite</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter CTA -->
+<section class="py-24 bg-surface-container-highest border-t border-outline/10">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h2 class="font-headline text-4xl font-bold mb-6">Join the Peak Society</h2>
+<p class="text-on-surface-variant mb-10 text-lg">Subscribers get first access to limited-edition mountain roasts and secret brewing guides.</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
+<input class="flex-1 bg-surface border-none rounded-full px-8 py-4 focus:ring-2 focus:ring-secondary text-primary font-body" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-surface font-headline font-bold px-10 py-4 rounded-full hover:bg-secondary transition-colors uppercase tracking-widest text-sm" type="submit">Join Now</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#2C1B18] dark:bg-[#100403] w-full relative overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 w-full max-w-7xl mx-auto">
+<div class="md:col-span-2">
+<span class="text-3xl font-black text-stone-50 mb-4 block">DEOMALI COFFEE</span>
+<p class="text-stone-400 font-['Manrope'] text-sm tracking-wide max-w-sm mb-8">
+                    Bringing the spirit of the highest peak to your daily ritual. Roasted with intention, served with pride.
+                </p>
+<div class="flex gap-6">
+<a class="text-stone-400 hover:text-[#FE5E1E] transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-stone-400 hover:text-[#FE5E1E] transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-stone-400 hover:text-[#FE5E1E] transition-colors" href="#"><span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-[#FE5E1E] font-bold mb-6 uppercase tracking-widest text-xs">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 block text-sm" href="#">Shop Roasts</a></li>
+<li><a class="text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 block text-sm" href="#">Brew Guides</a></li>
+<li><a class="text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 block text-sm" href="#">Café Locations</a></li>
+<li><a class="text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 block text-sm" href="#">Wholesale</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#FE5E1E] font-bold mb-6 uppercase tracking-widest text-xs">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 block text-sm" href="#">Shipping Policy</a></li>
+<li><a class="text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 block text-sm" href="#">Privacy</a></li>
+<li><a class="text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 block text-sm" href="#">Terms</a></li>
+<li><a class="text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 block text-sm" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-stone-800/50 py-8 px-8 text-center">
+<p class="text-stone-500 font-['Manrope'] text-xs tracking-[0.2em] uppercase">© 2024 DEOMALI COFFEE. BREWED FOR THE BOLD.</p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#57423e",
+                    "error": "#ba1a1a",
+                    "surface-container": "#efefd7",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#705955",
+                    "inverse-surface": "#303221",
+                    "primary-fixed-dim": "#dec0bb",
+                    "primary": "#100403",
+                    "on-tertiary-fixed-variant": "#005307",
+                    "on-tertiary-container": "#349a30",
+                    "error-container": "#ffdad6",
+                    "background": "#fbfbe2",
+                    "tertiary": "#000a00",
+                    "on-surface": "#1b1d0e",
+                    "on-primary-fixed": "#281714",
+                    "outline-variant": "#d3c3c0",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e4e4cc",
+                    "on-secondary-fixed": "#390c00",
+                    "primary-container": "#2c1b18",
+                    "on-secondary-fixed-variant": "#832700",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#dec0bb",
+                    "on-primary-container": "#9b817c",
+                    "tertiary-fixed-dim": "#77dd6a",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dbdcc3",
+                    "on-surface-variant": "#4f4442",
+                    "primary-fixed": "#fbdcd6",
+                    "secondary-fixed": "#ffdbcf",
+                    "surface-container-high": "#eaead1",
+                    "surface-bright": "#fbfbe2",
+                    "outline": "#817472",
+                    "surface": "#fbfbe2",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1d0e",
+                    "secondary-fixed-dim": "#ffb59c",
+                    "tertiary-fixed": "#92fa83",
+                    "surface-container-highest": "#e4e4cc",
+                    "on-tertiary-fixed": "#002201",
+                    "secondary-container": "#fe5e1e",
+                    "inverse-on-surface": "#f2f2d9",
+                    "surface-container-low": "#f5f5dc",
+                    "secondary": "#ab3600",
+                    "tertiary-container": "#002601",
+                    "on-secondary-container": "#551600",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+        .active-icon {
+            font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+        .glass-card {
+            background: rgba(251, 251, 226, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .grainy-overlay {
+            position: relative;
+        }
+        .grainy-overlay::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAJnc8LQi4gx-wlUdu-3ZQc_AP9USq_z7B0wqV-sVrG42y0G2jCdwNIrzRGvDeBt8iQZiXE1bU4wBtR5oRmV9iQ04O9SsFXjgxzTdnCUyZBaNhmcCVeNyHwEkK7AaaARG0euB1XjG2MrdaykE3UB3FGkAPY0Rcc9qK9fl7YjAl7tURfLX-z9AQzlj2SCEFL0d5MBKCaY9u5ACu8MD5tqN8RwjyTqWN7cgG9Ts70drLV3zTJOFkNmc_YNWCUtFbVS4ydb9JU8AHcIBB3);
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 5;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            min-height: 100dvh;
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- App Bar with Search -->
+<header class="bg-surface/90 backdrop-blur-xl fixed top-0 w-full z-50 px-4 pt-4 pb-2">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center px-1">
+<h1 class="text-xl font-black tracking-widest text-primary font-['Space_Grotesk']">DEOMALI</h1>
+<div class="flex gap-4">
+<button class="text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-primary active:scale-90 transition-transform relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">2</span>
+</button>
+</div>
+</div>
+<!-- Native Search Bar -->
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl" data-icon="search">search</span>
+<input class="w-full bg-surface-container-high border-none rounded-2xl py-3.5 pl-12 pr-4 text-sm font-label focus:ring-2 focus:ring-secondary-container/50 transition-all placeholder:text-on-surface-variant/60" placeholder="Search coffee, roasts, gear..." type="text"/>
+</div>
+</div>
+</header>
+<main class="pt-36 pb-32 px-4">
+<!-- Chips Section -->
+<section class="mb-8">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-2">
+<button class="flex items-center gap-2 bg-primary text-surface px-5 py-2.5 rounded-full flex-shrink-0 active:scale-95 transition-all shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-sm" data-icon="tune">tune</span>
+<span class="font-label text-xs font-bold uppercase tracking-wider">Filter</span>
+</button>
+<button class="bg-secondary-container text-on-secondary-container px-5 py-2.5 rounded-full flex-shrink-0 font-label text-xs font-bold uppercase tracking-wider border border-secondary-container">Single Origin</button>
+<button class="bg-surface-container-high text-on-surface px-5 py-2.5 rounded-full flex-shrink-0 font-label text-xs font-bold uppercase tracking-wider border border-outline-variant/15">Blends</button>
+<button class="bg-surface-container-high text-on-surface px-5 py-2.5 rounded-full flex-shrink-0 font-label text-xs font-bold uppercase tracking-wider border border-outline-variant/15">Drip</button>
+<button class="bg-surface-container-high text-on-surface px-5 py-2.5 rounded-full flex-shrink-0 font-label text-xs font-bold uppercase tracking-wider border border-outline-variant/15">Gear</button>
+</div>
+</section>
+<!-- Native App Style Product Gallery -->
+<div class="space-y-6">
+<!-- Feature Hero Card -->
+<div class="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden grainy-overlay group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Premium coffee bag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEt-yepOT066ZX_V3rpi9IF-09gmih5ucDFqZ53yPnRUxKGGIGjaA1BfjWPT6-YgD0FvMPGVBOJ9bz99c2kVS8v_f-DTMWyZbcegJ5GDKJFC4_kYDyvTvtgmJhdQY_xXEvg3PF6A0SSuLvBya1fH82OAkIHxO9CEBIzOyTZgGvsJ2jvi44ZEJfs5V5TYiirxHzwc2l23AHJPtTLQrNbFiVe50SL_TIAQOM-EgKTb2K2bYbXYTDkeCCLQuTM9w3gJ3Mh-29qtaO71nm"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute top-6 left-6">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest">BEST SELLER</span>
+</div>
+<div class="absolute bottom-8 left-8 right-8">
+<h3 class="font-headline text-4xl font-bold text-surface-bright leading-tight">Dark Peak<br/>Reserve</h3>
+<p class="text-surface-variant/80 font-label text-xs tracking-[0.2em] mt-2 mb-6">ROAST: HEAVY DARK • DEOMALI RIDGE</p>
+<div class="flex justify-between items-center">
+<p class="text-secondary-container font-headline text-2xl font-black">$24.00</p>
+<button class="bg-surface text-primary px-6 py-3 rounded-2xl font-bold text-xs uppercase tracking-widest active:scale-95 transition-transform flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="add_shopping_cart">add_shopping_cart</span>
+                        Add
+                    </button>
+</div>
+</div>
+</div>
+<!-- Two Column Grid -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Product Item 1 -->
+<div class="bg-surface-container-low rounded-[2rem] p-3 flex flex-col group">
+<div class="relative aspect-square rounded-[1.5rem] overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Coffee brewing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgsSJnANxXfDCJSTyAUrkMDgHt9FXpIavkoqGb4tMcINVcm3enaItqQMBZOM3PBWMq7iS7FBOMAax8k04dsZesOZcx44SLGBVZgqrl3Ze6dhsT2MHiLpsoa2AW-DLw8qizo54-fJ7lXqCS2n9d7n1hi7mpRCTbTKxkWUf3yiDCH_xNM1MIYR4prYZd3WRbhx55AZ-xgDmLHB67MqfHTW1qOAKYm_thRm6rfarAQH12wkWANJDtlK2bAc3my-W_jwGtQyoeSdx1Jnfr"/>
+<button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface/90 backdrop-blur-md flex items-center justify-center active:scale-90">
+<span class="material-symbols-outlined text-lg text-secondary active-icon" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="px-1 flex-grow flex flex-col justify-between">
+<div>
+<h4 class="font-headline font-bold text-lg text-primary leading-tight">Aura Mist</h4>
+<p class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest mt-1">Light / Fruity</p>
+</div>
+<div class="flex justify-between items-center mt-4">
+<span class="font-headline font-black text-xl text-primary">$18</span>
+<button class="w-11 h-11 bg-primary text-surface rounded-2xl flex items-center justify-center active:scale-90 transition-transform shadow-md">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Item 2 -->
+<div class="bg-surface-container-low rounded-[2rem] p-3 flex flex-col group">
+<div class="relative aspect-square rounded-[1.5rem] overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Coffee beans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWqvIWrhtEPShtNO3DsYfVtnp3ZjfvvMqHhjFl5N15rFH0nr0ArRigJBXnh29qnewHawUEVvRJlNsoPlxb7u-qno0ArsTvGLiD5_mIeLM0q3LetSwAX1dD0EL_rK2ZTFZRo7-zHpvyxIVyFa3bXYNzI0cegs-YQ8FF6ZtgYO5wzfPTeq_Ao3pV4XJgQs4FHLqrM5zbxPxYHcN289qk78PPiSpnWImF4z_g5-jBF_pb9AzlARfZlvjZFwmdP6eYLcSZapTmTjaNhOhI"/>
+<button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface/90 backdrop-blur-md flex items-center justify-center active:scale-90">
+<span class="material-symbols-outlined text-lg text-on-surface-variant" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="px-1 flex-grow flex flex-col justify-between">
+<div>
+<h4 class="font-headline font-bold text-lg text-primary leading-tight">Earth Grind</h4>
+<p class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest mt-1">Medium / Nutty</p>
+</div>
+<div class="flex justify-between items-center mt-4">
+<span class="font-headline font-black text-xl text-primary">$20</span>
+<button class="w-11 h-11 bg-primary text-surface rounded-2xl flex items-center justify-center active:scale-90 transition-transform shadow-md">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Promotional App Banner -->
+<div class="bg-primary-container rounded-[2.5rem] p-8 grainy-overlay overflow-hidden relative group">
+<div class="relative z-10">
+<h3 class="font-headline text-3xl font-bold text-surface leading-none mb-3">BREW AT<br/>HOME.</h3>
+<p class="text-on-primary-container/70 text-xs font-label uppercase tracking-[0.2em] mb-8">Expert Kits &amp; Accessories</p>
+<button class="bg-secondary-container text-on-secondary-fixed px-8 py-3.5 rounded-2xl font-label text-xs font-black uppercase tracking-widest active:scale-95 transition-transform shadow-xl shadow-secondary-container/20">Explore Gear</button>
+</div>
+<div class="absolute -right-12 -bottom-12 w-56 h-56 opacity-20 border-[30px] border-secondary-container rounded-full group-hover:scale-110 transition-transform duration-1000"></div>
+</div>
+</div>
+</main>
+<!-- Footer Content (Brief for App) -->
+<footer class="bg-primary pt-12 pb-36 px-6 flex flex-col items-center gap-6 text-center">
+<div class="font-['Space_Grotesk'] font-bold text-secondary-container text-2xl tracking-tighter">DEOMALI</div>
+<div class="flex gap-8">
+<a class="font-label text-[10px] tracking-widest text-surface/40 uppercase hover:text-secondary-container transition-colors" href="#">Support</a>
+<a class="font-label text-[10px] tracking-widest text-surface/40 uppercase hover:text-secondary-container transition-colors" href="#">Shipping</a>
+<a class="font-label text-[10px] tracking-widest text-surface/40 uppercase hover:text-secondary-container transition-colors" href="#">Privacy</a>
+</div>
+<p class="font-label text-[10px] tracking-widest text-surface/20 uppercase">© 2024 DEOMALI ROASTERS</p>
+</footer>
+<!-- Persistent Native Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full bg-surface/95 dark:bg-primary/95 backdrop-blur-xl border-t border-outline-variant/10 z-[100] px-6 pb-8 pt-3 flex justify-between items-center shadow-[0_-8px_30px_rgba(0,0,0,0.04)]">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant group" href="#">
+<span class="material-symbols-outlined text-2xl group-active:scale-110 transition-transform" data-icon="home">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider font-label">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-secondary-container" href="#">
+<div class="relative">
+<span class="material-symbols-outlined text-2xl active-icon" data-icon="shopping_cart">shopping_cart</span>
+<div class="absolute -top-1 -right-1 w-1.5 h-1.5 bg-secondary-container rounded-full"></div>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider font-label">Shop</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant group" href="#">
+<span class="material-symbols-outlined text-2xl group-active:scale-110 transition-transform" data-icon="local_fire_department">local_fire_department</span>
+<span class="text-[10px] font-bold uppercase tracking-wider font-label">Roastery</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant group" href="#">
+<span class="material-symbols-outlined text-2xl group-active:scale-110 transition-transform" data-icon="person">person</span>
+<span class="text-[10px] font-bold uppercase tracking-wider font-label">Account</span>
+</a>
+</nav>
+</body></html>

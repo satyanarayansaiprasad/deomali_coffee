@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#fbfbe2",
+              "secondary": "#ab3600",
+              "tertiary-fixed-dim": "#77dd6a",
+              "on-tertiary-fixed": "#002201",
+              "inverse-on-surface": "#f2f2d9",
+              "on-primary-fixed-variant": "#57423e",
+              "tertiary-container": "#002601",
+              "primary-fixed-dim": "#dec0bb",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              "surface-container-low": "#f5f5dc",
+              "on-background": "#1b1d0e",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#390c00",
+              "secondary-fixed-dim": "#ffb59c",
+              "secondary-container": "#fe5e1e",
+              "on-primary": "#ffffff",
+              "surface-bright": "#fbfbe2",
+              "primary-fixed": "#fbdcd6",
+              "error": "#ba1a1a",
+              "on-primary-fixed": "#281714",
+              "tertiary": "#000a00",
+              "on-primary-container": "#9b817c",
+              "inverse-primary": "#dec0bb",
+              "on-tertiary-container": "#349a30",
+              "tertiary-fixed": "#92fa83",
+              "on-surface-variant": "#4f4442",
+              "surface-tint": "#705955",
+              "on-secondary-fixed-variant": "#832700",
+              "surface-dim": "#dbdcc3",
+              "on-error-container": "#93000a",
+              "on-secondary-container": "#551600",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#e4e4cc",
+              "primary": "#100403",
+              "surface-container-highest": "#e4e4cc",
+              "outline": "#817472",
+              "outline-variant": "#d3c3c0",
+              "primary-container": "#2c1b18",
+              "on-surface": "#1b1d0e",
+              "surface-container-high": "#eaead1",
+              "on-tertiary-fixed-variant": "#005307",
+              "surface": "#fbfbe2",
+              "secondary-fixed": "#ffdbcf",
+              "surface-container": "#efefd7",
+              "error-container": "#ffdad6",
+              "inverse-surface": "#303221"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .custom-spring {
+        transition-timing-function: cubic-bezier(0.4, 0.1, 0.3, 1.5);
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-[#100403]/80 backdrop-blur-xl shadow-[0px_20px_40px_rgba(44,27,24,0.08)]">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-[#100403] dark:text-stone-50 font-headline uppercase">
+                Deomali Coffee
+            </div>
+<div class="hidden md:flex space-x-8">
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-[#AB3600] dark:text-[#FE5E1E] border-b-2 border-[#AB3600] pb-1 hover:opacity-80 transition-opacity duration-300" href="#">Shop</a>
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-[#100403] dark:text-stone-300 hover:text-[#AB3600] transition-opacity duration-300" href="#">About</a>
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-[#100403] dark:text-stone-300 hover:text-[#AB3600] transition-opacity duration-300" href="#">Café</a>
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-[#100403] dark:text-stone-300 hover:text-[#AB3600] transition-opacity duration-300" href="#">Subscription</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="scale-95 active:scale-90 transition-transform hover:opacity-80">
+<span class="material-symbols-outlined text-[#AB3600] dark:text-[#FE5E1E]">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20 max-w-7xl mx-auto px-6">
+<!-- Hero Section: Organic Brutalism Layout -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-32">
+<!-- Product Images (Left) -->
+<div class="lg:col-span-7 grid grid-cols-12 gap-4">
+<div class="col-span-12 relative overflow-hidden rounded-xl bg-surface-container-low group">
+<img alt="Deomali Estate Reserve" class="w-full aspect-[4/5] object-cover custom-spring group-hover:scale-105" data-alt="Premium dark roasted coffee beans in a handcrafted ceramic bowl with dramatic side lighting and steam rising" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3b5j8C-owyKeZl3X8Db3pZkQXr7EDpBp_qrLsMbVGPCvuoBDQfO4LtMg5freL-8Cp8vxuVYOIzqQ9X5QfRteBvOhhDndue7lx0j6krFbv5QjmMpvwMAwONJzLaz4_coAO-tNSz8mzBBa9QEUO2_bgoEWRw2J9T6eiXDmstR2bv3ZbtW6YDDTBmi1UF9FY8CvCubgI-IV858R9tOl2CyyQn-zUhDugf4fQbo9AbvrfU2DWnc9jwa85YnXOCTYR3ds7bcX45SWNHeA6"/>
+<div class="absolute bottom-6 left-6 glass-effect bg-surface/80 px-4 py-2 rounded-full border border-outline-variant/15">
+<span class="font-headline font-black text-primary text-sm tracking-widest uppercase">Estate Reserve No. 04</span>
+</div>
+</div>
+<div class="col-span-6 rounded-xl overflow-hidden bg-surface-container-high">
+<img alt="Brew Detail" class="w-full aspect-square object-cover" data-alt="Close up of a barista pouring milk into a rich espresso for latte art in a minimalist cafe setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWpEsKRZxsKwIn0T3Jsag3bvu-w33f9IXmACDxljQ9SYVDHp2Eqy6aXqHpYFzAOIBdqyX42mlYAGQLFo0y-6b34jr8fvDjiEuOl_pewcLjOByySjt7dFRBwdGeo6wvl9tyk3R0KkknLFq8alP_0qBLfyeT3AEStG9owQvSeANRqAODlVmfJyKIshTV62q92jsQsN83wmebgxH0DOJO-qZ_ehlwZ7duS_4JsKBUN06mAqJUym6LihP7bUDhVhLafIH9ovroj1KUodHF"/>
+</div>
+<div class="col-span-6 rounded-xl overflow-hidden bg-primary-container relative">
+<div class="absolute inset-0 opacity-10" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGmTDi8a1kHg99IUsu9Adb3VpIDYfni61vfuzSdJRf8Xp8cae4FCYL-L-O--ZwNGOuBicvJtxUMpAv8dhWKF1vGO4PgKiXwBp5OlN664REoNrIhtPpVImVcDc6h4cS3lYnoI6aVpYBze2jNxB2cYqQKnh-l0ari7DSCg1CgoqHxUky3GMrQjakmt7v9J1BDvBswe5JSQA02_o4KLdMr6MAHygwwRQq_uF0PD84pDBqVQYFLT8ebVyWNjtzENNbTO3JYihoBfVVYYkb');"></div>
+<img alt="Packaging Detail" class="w-full aspect-square object-cover opacity-90" data-alt="Minimalist packaging of coffee beans with bold black typography on textured kraft paper bag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBasrGE4xrahS1d2diEk6FKjdlsAmcbbyqFZIp7KW5KeYoOFZ71_SPHjE-PN_YJEixCHI-R_sV_bcksuRgfBf1ST_B5U8IxQ2DHp71kWK_mSwm5lke9UX7ApHRRYvjqie0IFaQ7ATTboBfjO9PKyaRZUB_EG0ajzx-D-eZQe4BVhE4OKulj2wiJMtIyLbgzTN8cKc640vgudbX_ClT3-316hs5tfxhywCL6lF0FvpuPsC4xc7NBGcCzKjIbZOmFIJTC07StYhUHULxF"/>
+</div>
+</div>
+<!-- Product Details (Right) -->
+<div class="lg:col-span-5 lg:sticky lg:top-32 space-y-8">
+<header>
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-secondary-container/10 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Single Origin</span>
+<span class="text-on-surface-variant text-xs font-medium uppercase tracking-widest">Available now</span>
+</div>
+<h1 class="font-headline text-6xl font-black text-primary leading-[0.9] tracking-tighter mb-4 uppercase">
+                        Kovale <br/>Highland
+                    </h1>
+<div class="flex items-baseline gap-4">
+<p class="font-headline text-3xl font-bold text-secondary">$34.00</p>
+<p class="text-on-surface-variant line-through text-sm">$42.00</p>
+</div>
+</header>
+<div class="space-y-6">
+<p class="text-lg text-on-surface leading-relaxed font-light">
+                        Cultivated at an altitude of 1,800m, the Kovale Highland reserve offers a complex profile of wild berries and velvet cocoa. This is coffee for those who demand intensity without the bitterness.
+                    </p>
+<!-- Tasting Notes: Asymmetric Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/15">
+<span class="material-symbols-outlined text-secondary block mb-2" data-icon="filter_vintage">filter_vintage</span>
+<h4 class="font-headline font-bold text-sm uppercase mb-1">Floral</h4>
+<p class="text-xs text-on-surface-variant">Jasmine &amp; Citrus Bloom</p>
+</div>
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/15">
+<span class="material-symbols-outlined text-secondary block mb-2" data-icon="nutrition">nutrition</span>
+<h4 class="font-headline font-bold text-sm uppercase mb-1">Nutty</h4>
+<p class="text-xs text-on-surface-variant">Toasted Macadamia</p>
+</div>
+</div>
+</div>
+<!-- Roast Slider (Design System Component) -->
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="font-headline text-xs font-bold uppercase tracking-widest">Roast Profile</span>
+<span class="text-xs font-bold text-secondary uppercase">Medium-Dark</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 w-[70%] bg-gradient-to-r from-surface-container-lowest to-primary-container rounded-full"></div>
+</div>
+</div>
+<div class="flex flex-col gap-4 pt-6">
+<button class="w-full bg-secondary-container text-on-secondary-fixed py-5 rounded-full font-headline font-extrabold uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-secondary/20">
+                        Add to Cart
+                    </button>
+<button class="w-full bg-primary text-on-primary py-5 rounded-full font-headline font-extrabold uppercase tracking-widest hover:bg-primary-container active:scale-95 transition-all">
+                        Buy Now
+                    </button>
+</div>
+<div class="flex items-center justify-center gap-8 py-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="local_shipping">local_shipping</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Fast Delivery</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="eco">eco</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Ethically Sourced</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Origin Story Section: Editorial Style -->
+<section class="mb-32">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<h2 class="font-headline text-5xl font-black text-primary uppercase mb-8 leading-tight">Born in the <br/><span class="text-secondary">Shadow of Deomali.</span></h2>
+<div class="space-y-6 text-on-surface-variant leading-relaxed">
+<p>Our journey begins in the Koraput valley, where the peaks of Deomali pierce the clouds. Here, the soil is rich, volcanic, and untouched. We work directly with smallholder farmers who have cultivated these lands for generations.</p>
+<p>Every bean is hand-picked at the peak of ripeness and sun-dried on raised beds. This isn't just about coffee; it's about preserving a micro-climate and a heritage of bold, uncompromising flavor.</p>
+<a class="inline-block font-label text-sm font-bold uppercase tracking-widest border-b-2 border-secondary pb-1 mt-4 hover:text-secondary transition-colors" href="#">Our Full Story</a>
+</div>
+</div>
+<div class="order-1 lg:order-2 relative">
+<div class="aspect-[16/10] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Deomali Peaks" class="w-full h-full object-cover" data-alt="Mist-covered coffee plantation on a steep hillside in the early morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPBO4A07tUZHGR9IJZqIrwuCCZj8uwm603c4XLHcTmpKO6QOQYNYYb5aKbfY_BH60vgpLZkP4VLGTz7OahGHOICJtGULs8I4kPNB4DTdHv_MJ8iq8L6ALtHdx8ywms2OsRT2CEIQY8Bscnzgawti0EneXcrd5F64EuteIG26bBizUtXYcBy1vZTCMc_ZZqxuMcI-jgfe5ulS8qWBeUvNjjEeSx0EJ-5AxkK_EVOMDG22FTtfGQr3EMGJV_QOp1Z27j3WrQ4nESMrQB"/>
+</div>
+<div class="absolute -bottom-10 -left-10 hidden lg:block w-48 h-48 bg-primary-container rounded-xl p-6 flex flex-col justify-end text-on-primary">
+<span class="text-4xl font-black font-headline">1.8k</span>
+<span class="text-[10px] uppercase font-bold tracking-widest opacity-60">Meters Altitude</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section: User-Generated Style -->
+<section class="mb-32 bg-surface-container-low p-12 rounded-[2rem]">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h3 class="font-headline text-4xl font-black text-primary uppercase mb-2">The Community Voice</h3>
+<div class="flex items-center gap-4">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="text-sm font-bold uppercase tracking-widest">4.8 / 5.0 (124 Reviews)</span>
+</div>
+</div>
+<button class="font-headline text-xs font-black uppercase tracking-widest text-primary border-2 border-primary px-8 py-4 rounded-full hover:bg-primary hover:text-on-primary transition-colors">Write a Review</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review Card 1 -->
+<div class="bg-surface p-8 rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="font-headline font-black text-sm uppercase">Marcus K.</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Verified Buyer</p>
+</div>
+<span class="text-[10px] text-on-surface-variant">2 days ago</span>
+</div>
+<p class="text-on-surface italic leading-relaxed mb-6">"Finally found a roast that holds its own in a Chemex without losing those delicate floral notes. The Kovale is my new daily driver."</p>
+<div class="flex gap-2">
+<img alt="Review photo" class="w-12 h-12 rounded-lg object-cover" data-alt="Close up of black coffee in a glass mug on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUiW4QXM5JCEXb5zx9rvzIMaJizIYFJO70XpX2JE1bBKbJv9AB2TwMKqn2eC8l-C63hWvNgD183-WL4YoE4d-1F4tBZrfdBIWMP297Ltd8pxPAhrVDO0hbP3wj6JasOfIYAKuT_XVjYQBzKviypYvWSw1nOwxBm-CSR0-m3fPrSEM-EJJEcM7RwRo-BRhvffcP0a-FFQXUYNcZORuSLs5HqxAY4l5ubijTtY5DrbUwhadZsUzHCh64PFiXszminVr5SUYuzw8g-gEj"/>
+</div>
+</div>
+<!-- Review Card 2 -->
+<div class="bg-surface p-8 rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="font-headline font-black text-sm uppercase">Sarah J.</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Verified Buyer</p>
+</div>
+<span class="text-[10px] text-on-surface-variant">1 week ago</span>
+</div>
+<p class="text-on-surface italic leading-relaxed mb-6">"Packaging is 10/10. The coffee is even better. Smells like a forest in the morning. Truly premium stuff."</p>
+</div>
+<!-- Review Card 3 -->
+<div class="bg-surface p-8 rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="font-headline font-black text-sm uppercase">David L.</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Verified Buyer</p>
+</div>
+<span class="text-[10px] text-on-surface-variant">3 weeks ago</span>
+</div>
+<p class="text-on-surface italic leading-relaxed mb-6">"I usually go for dark roasts, but this medium profile is so rich and buttery. Incredible mouthfeel."</p>
+</div>
+</div>
+</section>
+<!-- Related Products: Horizontal List -->
+<section>
+<div class="flex justify-between items-center mb-10">
+<h3 class="font-headline text-3xl font-black text-primary uppercase">You May Also Brew</h3>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex gap-8 overflow-x-auto pb-8 no-scrollbar -mx-6 px-6">
+<!-- Product Card 1 -->
+<div class="min-w-[280px] group cursor-pointer">
+<div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-high mb-4 relative">
+<img alt="Dark Roast" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Elegant brown paper bag of coffee standing on a stone surface with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNTcVA6fOSQoN_ZkMo0YFyAVvCVyKbeW6HkVcb0jMVG0bYCpw7suazW7d_jlq_4EVU9e_32OvP8SHKL2xcdlJ0uZkZs5vmS1oSc9Yy0z9ax5SUXNilzekBxKbNySSyfAnb-NR60soj8xzhL1ST3f4bwuJS2mQcEaUeVgmr45fG9cp7bypjiEIvW-9hI7pDiIz-CHo83hSPnr1AVVfLc7d_sVXD0BK3EXvRKYPL7cBfGecgB9ZMZL9c1Jnuzhnvo9xwFJY0PdUboaMG"/>
+<div class="absolute top-4 right-4 bg-primary text-on-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Classic</div>
+</div>
+<h4 class="font-headline font-bold text-lg uppercase">Koraput Black</h4>
+<p class="text-secondary font-headline font-bold">$29.00</p>
+</div>
+<!-- Product Card 2 -->
+<div class="min-w-[280px] group cursor-pointer">
+<div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-high mb-4 relative">
+<img alt="Light Roast" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Bag of specialty light roast coffee beans on a bright minimalist marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuIkCnIB1tOulDVYpw54spusDIxy5fE7GWiLoUvd08o6ubBX3XR35_6C1b4Q3hzt09y38JBiC9O7Yh-fCXzkh2nTDMMN1uHk9Vdd-0_87h1DVsNgpkHKRN7iKfwtng8TbxHrklkTKHc3_xSnWst1U8mt9sdUvZglXRUkIWoZmj-T9et3dMgBJZ1lqVX8coWYpt37F9klXko4inrmM-JsXc6uqVIy-rkx_1RxG7EDQKTW4_030K5PY89Z55JBUgcy26MwtJMS-HeCJu"/>
+</div>
+<h4 class="font-headline font-bold text-lg uppercase">Valley Mist</h4>
+<p class="text-secondary font-headline font-bold">$32.00</p>
+</div>
+<!-- Product Card 3 -->
+<div class="min-w-[280px] group cursor-pointer">
+<div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-high mb-4 relative">
+<img alt="Decaf Reserve" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Three different coffee bags arranged artistically on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClLLf52LsQ2Rg8dKiCrzhsE56un0OS7WR3QxVly3fNyIZMlste4MJY0lXUU6Z4w8Gd1DyGOWY4DB-GuDFKAVUQ44talV-Bmbj1x_Bv94CG_wUKXS1O-LsUu6WMquWeSrhikWeENFVcBsjz8po7vEGUQg2H-u3ucjgSIl_6eA1GGYZl3PZ0SqUJzzmmYUN1AWqx4QDErSeOhS9DOZfBzt9L52fqyfmu_1VqYmlA5n4aTtLXmveG4Qm-RQOrAs0LM29V1ZsgLAGc8Iax"/>
+</div>
+<h4 class="font-headline font-bold text-lg uppercase">Sunset Decaf</h4>
+<p class="text-secondary font-headline font-bold">$30.00</p>
+</div>
+<!-- Product Card 4 -->
+<div class="min-w-[280px] group cursor-pointer">
+<div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-high mb-4 relative">
+<img alt="Limited Release" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Pour over coffee being prepared with a glass carafe and a paper filter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdk3isEQjpgWDBs2-e0o5uzSVK_hPjApgWoawocraKicWK8RBAOtIa0uTab2RueqhQLOaMgS-bsDjH62tsdIupTjEUgy85OJmCQgyza6n7IWJcYNzbYzKy5jBg_x8Y8N_zJhFQtcf-QQIut7ma6FRUc3iig1r3Wc2H2kGHNm99ggY69LWUKBCTTl_JcBl9nHMLIwTu_bAlREBFdO6FC6OOW_UCYCQ3ZtP2kWt_d1uDUeEiN1sbfHynGWR_Qof7dkNwFguXAl9BTZip"/>
+<div class="absolute top-4 right-4 bg-secondary-container text-on-secondary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Rare</div>
+</div>
+<h4 class="font-headline font-bold text-lg uppercase">Moonlight Geisha</h4>
+<p class="text-secondary font-headline font-bold">$58.00</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#2C1B18] dark:bg-[#100403] w-full relative overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 w-full max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<span class="text-3xl font-black text-stone-50 mb-4 block font-headline uppercase">DEOMALI</span>
+<p class="font-body text-sm tracking-wide text-stone-400 leading-relaxed">Crafting the future of coffee through heritage, altitude, and bold roasting techniques.</p>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="text-stone-50 font-headline font-bold text-sm uppercase tracking-widest mb-2">Explore</span>
+<a class="font-body text-sm tracking-wide text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200" href="#">Shop All</a>
+<a class="font-body text-sm tracking-wide text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200" href="#">Wholesale</a>
+<a class="font-body text-sm tracking-wide text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200" href="#">Brew Guides</a>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="text-stone-50 font-headline font-bold text-sm uppercase tracking-widest mb-2">Legal</span>
+<a class="font-body text-sm tracking-wide text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200" href="#">Privacy Policy</a>
+<a class="font-body text-sm tracking-wide text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200" href="#">Terms of Service</a>
+<a class="font-body text-sm tracking-wide text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200" href="#">Shipping Info</a>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="text-stone-50 font-headline font-bold text-sm uppercase tracking-widest mb-2">Stay Connected</span>
+<div class="flex space-x-4">
+<a class="text-stone-400 hover:text-[#FE5E1E] transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-stone-400 hover:text-[#FE5E1E] transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+<div class="mt-4 pt-4 border-t border-stone-800">
+<p class="font-body text-[10px] tracking-widest text-stone-500 uppercase">© 2024 DEOMALI COFFEE. BREWED FOR THE BOLD.</p>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

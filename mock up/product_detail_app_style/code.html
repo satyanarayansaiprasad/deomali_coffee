@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#57423e",
+                    "error": "#ba1a1a",
+                    "surface-container": "#efefd7",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#705955",
+                    "inverse-surface": "#303221",
+                    "primary-fixed-dim": "#dec0bb",
+                    "primary": "#100403",
+                    "on-tertiary-fixed-variant": "#005307",
+                    "on-tertiary-container": "#349a30",
+                    "error-container": "#ffdad6",
+                    "background": "#fbfbe2",
+                    "tertiary": "#000a00",
+                    "on-surface": "#1b1d0e",
+                    "on-primary-fixed": "#281714",
+                    "outline-variant": "#d3c3c0",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e4e4cc",
+                    "on-secondary-fixed": "#390c00",
+                    "primary-container": "#2c1b18",
+                    "on-secondary-fixed-variant": "#832700",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#dec0bb",
+                    "on-primary-container": "#9b817c",
+                    "tertiary-fixed-dim": "#77dd6a",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dbdcc3",
+                    "on-surface-variant": "#4f4442",
+                    "primary-fixed": "#fbdcd6",
+                    "secondary-fixed": "#ffdbcf",
+                    "surface-container-high": "#eaead1",
+                    "surface-bright": "#fbfbe2",
+                    "outline": "#817472",
+                    "surface": "#fbfbe2",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1d0e",
+                    "secondary-fixed-dim": "#ffb59c",
+                    "tertiary-fixed": "#92fa83",
+                    "surface-container-highest": "#e4e4cc",
+                    "on-tertiary-fixed": "#002201",
+                    "secondary-container": "#fe5e1e",
+                    "inverse-on-surface": "#f2f2d9",
+                    "surface-container-low": "#f5f5dc",
+                    "secondary": "#ab3600",
+                    "tertiary-container": "#002601",
+                    "on-secondary-container": "#551600",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+        }
+        .grain-overlay {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBu7U5opV0Ye442xYMi71J7KN2pdhavV-eqjxYeJ-BoaL2IDmgpqjmFElVuO9TxvSVj7iPa17UnhRKmZidFiT8ZAmPSq8EidMZEWdincVhZHLiuY1j6uZIDEu1MS5_Wg23b4K46E1mMtyG_-RSLtFoAvC8so3Ev-pFChduimJLXKDVjCg5NRZ10jf3pijSwDzTDmZKo4Lu-QllcLE7tbDRhDffMz35cXp9njO3lwPFYJo6k4Pcfs3ts0yCNLLHY9sB79rqir_jHJC7b);
+            opacity: 0.05
+        }
+        .glass-card {
+            background: rgba(251, 251, 226, 0.8);
+            backdrop-filter: blur(12px)
+        }
+        body {
+            min-height: 100dvh;
+            padding-bottom: 160px; /* Space for Bottom Nav + Add to Cart */
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar: Native Style -->
+<header class="bg-surface/90 backdrop-blur-xl sticky top-0 w-full z-[60] border-b border-outline-variant/10">
+<div class="flex justify-between items-center px-4 h-14 w-full">
+<button class="w-10 h-10 flex items-center justify-center text-primary active:bg-surface-variant/50 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline font-bold tracking-[0.2em] text-sm text-primary">DEOMALI</h1>
+<div class="flex">
+<button class="w-10 h-10 flex items-center justify-center text-primary active:bg-surface-variant/50 rounded-full transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-primary active:bg-surface-variant/50 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1.5 right-1.5 bg-secondary-container text-[8px] w-3.5 h-3.5 flex items-center justify-center rounded-full text-on-secondary-container font-bold">2</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Native Image Carousel -->
+<section class="relative w-full overflow-hidden">
+<div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar aspect-[4/5] w-full">
+<div class="flex-none w-full h-full snap-start">
+<img alt="Premium coffee bag" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi4smbzEZ0JlxEc_3xLbMczjr71upC1CPC9WZkaDBC56o3cUSg12DdGk8en8X704y67bYu3zCuytDvt0tGZNnkOsqRp-k8xKxN44Fy33EuleZJ--mpDt9f__HaCvG2lSj7ZQdh62nKJkEuLV8cexivrz1Bw6MjfgBF1n1J2fHYL_LLLAch9ssdNIShf-mjLXUlo0a3FXUFFx1Xrkm0JiPyKvKLWApNauptgB1Em9lj6E8cinCkOxuGH0SyznQx5tuhClXQBgmvMg_c"/>
+</div>
+<div class="flex-none w-full h-full snap-start">
+<img alt="Coffee details" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7moWWYwNzLf-iIw_huf_0Vu48GRjb4LTS47g1sr-zhIeFQsAKJsWXGOFpJEr98ai8Y76duD-Eyt7p8NNmW5_uw8KTRE2ryNWsOflTwAKfd_OZP0MsxnnxRJGlEREHraTkQpVNMsk6rfK3o6Jzg-iBd-rIMWrlANr6bu3y5jdffotOGKyep4hDwV5JWUIdF5-5nNfWRw0gHfBIgaBmfG2U1fzjh95sw0soIz3LxmhTJT4Gc7NEHQa7-3sW-1Gz2EyY3Q5NqYUxMw6D"/>
+</div>
+</div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+<div class="w-1.5 h-1.5 rounded-full bg-surface"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-surface/40"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-surface/40"></div>
+</div>
+</section>
+<!-- Product Info Section -->
+<section class="px-5 py-8 bg-surface rounded-t-[32px] -mt-8 relative z-20">
+<div class="flex flex-col gap-6">
+<div>
+<span class="inline-flex items-center px-2 py-1 bg-secondary-container/10 text-secondary text-[10px] font-black uppercase tracking-wider rounded-md mb-2">Direct Trade</span>
+<div class="flex justify-between items-start">
+<h2 class="font-headline text-3xl font-black text-primary leading-none tracking-tight w-2/3">THE KORAPUT RESERVE</h2>
+<p class="font-headline text-2xl font-bold text-primary">$34.00</p>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<div class="flex">
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">(128 reviews)</span>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-3 gap-3">
+<div class="bg-surface-container-low/50 p-3 rounded-2xl border border-outline-variant/10 text-center">
+<p class="text-[9px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Body</p>
+<p class="font-headline font-bold text-sm text-primary">Syrupy</p>
+</div>
+<div class="bg-surface-container-low/50 p-3 rounded-2xl border border-outline-variant/10 text-center">
+<p class="text-[9px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Acidity</p>
+<p class="font-headline font-bold text-sm text-primary">Bright</p>
+</div>
+<div class="bg-surface-container-low/50 p-3 rounded-2xl border border-outline-variant/10 text-center">
+<p class="text-[9px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Flavor</p>
+<p class="font-headline font-bold text-sm text-primary">Honey</p>
+</div>
+</div>
+<!-- Details -->
+<div class="space-y-3">
+<h3 class="font-headline text-sm font-bold uppercase tracking-[0.1em] text-primary">The Origin Story</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed font-normal">
+                    Sourced from the misty peaks of the Deomali Range, this reserve represents our most ambitious roast yet. Expect a complex dance of wild honey and sun-drenched stone fruit.
+                </p>
+</div>
+<!-- Material Inspired Chips: Roast -->
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<label class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">Roast Intensity</label>
+<span class="text-secondary text-[11px] font-black uppercase">Medium-Light</span>
+</div>
+<div class="flex gap-2 overflow-x-auto no-scrollbar py-1">
+<button class="flex-none px-5 py-2 rounded-full text-xs font-bold bg-primary-container text-surface border border-transparent shadow-md">Light</button>
+<button class="flex-none px-5 py-2 rounded-full text-xs font-bold bg-surface-container-high text-on-surface-variant border border-outline-variant/20 active:bg-secondary-container/20">Medium</button>
+<button class="flex-none px-5 py-2 rounded-full text-xs font-bold bg-surface-container-high text-on-surface-variant border border-outline-variant/20 active:bg-secondary-container/20">Dark</button>
+</div>
+</div>
+<!-- Material Inspired Chips: Grind -->
+<div class="space-y-4">
+<label class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">Select Grind</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-5 py-2 rounded-full text-xs font-bold bg-primary text-surface border-2 border-primary transition-all">Whole Bean</button>
+<button class="px-5 py-2 rounded-full text-xs font-bold bg-transparent text-on-surface-variant border-2 border-outline-variant/30 active:border-secondary transition-all">Filter</button>
+<button class="px-5 py-2 rounded-full text-xs font-bold bg-transparent text-on-surface-variant border-2 border-outline-variant/30 active:border-secondary transition-all">Espresso</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Features -->
+<section class="px-5 pb-12">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-5 rounded-[28px] flex flex-col justify-between aspect-square border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-2xl">eco</span>
+<p class="font-headline font-bold text-sm text-primary leading-tight">Eco-Friendly<br/>Packaging</p>
+</div>
+<div class="bg-primary-container p-5 rounded-[28px] flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-secondary-container text-2xl">handshake</span>
+<p class="font-headline font-bold text-sm text-surface-container leading-tight">Ethically<br/>Sourced</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Persistent Actions Stack -->
+<div class="fixed bottom-0 left-0 w-full z-[70]">
+<!-- Add to Cart Bar -->
+<div class="px-4 py-4 bg-surface/90 backdrop-blur-2xl border-t border-outline-variant/20 shadow-[0_-10px_30px_rgba(0,0,0,0.04)] flex gap-3 items-center">
+<div class="flex items-center bg-surface-container-high/50 rounded-2xl px-2 py-1.5 border border-outline-variant/20">
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-90 transition-transform"><span class="material-symbols-outlined text-base">remove</span></button>
+<span class="px-3 font-headline font-black text-sm">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-90 transition-transform"><span class="material-symbols-outlined text-base">add</span></button>
+</div>
+<button class="flex-1 bg-secondary-container text-on-secondary-fixed h-14 rounded-2xl font-headline font-black text-sm tracking-widest shadow-[0_8px_20px_rgba(254,94,30,0.25)] active:scale-95 active:shadow-none transition-all uppercase">
+            Add to Cart
+        </button>
+</div>
+<!-- Persistent Bottom Navigation -->
+<nav class="bg-surface border-t border-outline-variant/10 h-16 flex items-center justify-around px-2">
+<button class="flex flex-col items-center justify-center gap-1 w-full text-secondary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">storefront</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Shop</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 w-full text-on-surface-variant/40">
+<span class="material-symbols-outlined text-2xl">auto_stories</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Journal</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 w-full text-on-surface-variant/40">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Saved</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 w-full text-on-surface-variant/40">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Account</span>
+</button>
+</nav>
+</div>
+<!-- Footer (simplified for app feel) -->
+<footer class="bg-primary pt-12 pb-44 px-6 text-center">
+<h3 class="font-headline font-black text-secondary-container text-xl tracking-[0.3em] mb-6">DEOMALI</h3>
+<div class="flex justify-center gap-8 mb-8">
+<a class="text-[10px] font-bold tracking-widest text-surface/50 uppercase" href="#">Sourcing</a>
+<a class="text-[10px] font-bold tracking-widest text-surface/50 uppercase" href="#">Guides</a>
+<a class="text-[10px] font-bold tracking-widest text-surface/50 uppercase" href="#">Contact</a>
+</div>
+<p class="text-[9px] tracking-widest text-surface/20">© 2024 DEOMALI ROASTERS</p>
+</footer>
+</body></html>

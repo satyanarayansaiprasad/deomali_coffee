@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#57423e",
+                    "error": "#ba1a1a",
+                    "surface-container": "#efefd7",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#705955",
+                    "inverse-surface": "#303221",
+                    "primary-fixed-dim": "#dec0bb",
+                    "primary": "#100403",
+                    "on-tertiary-fixed-variant": "#005307",
+                    "on-tertiary-container": "#349a30",
+                    "error-container": "#ffdad6",
+                    "background": "#fbfbe2",
+                    "tertiary": "#000a00",
+                    "on-surface": "#1b1d0e",
+                    "on-primary-fixed": "#281714",
+                    "outline-variant": "#d3c3c0",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e4e4cc",
+                    "on-secondary-fixed": "#390c00",
+                    "primary-container": "#2c1b18",
+                    "on-secondary-fixed-variant": "#832700",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#dec0bb",
+                    "on-primary-container": "#9b817c",
+                    "tertiary-fixed-dim": "#77dd6a",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dbdcc3",
+                    "on-surface-variant": "#4f4442",
+                    "primary-fixed": "#fbdcd6",
+                    "secondary-fixed": "#ffdbcf",
+                    "surface-container-high": "#eaead1",
+                    "surface-bright": "#fbfbe2",
+                    "outline": "#817472",
+                    "surface": "#fbfbe2",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1d0e",
+                    "secondary-fixed-dim": "#ffb59c",
+                    "tertiary-fixed": "#92fa83",
+                    "surface-container-highest": "#e4e4cc",
+                    "on-tertiary-fixed": "#002201",
+                    "secondary-container": "#fe5e1e",
+                    "inverse-on-surface": "#f2f2d9",
+                    "surface-container-low": "#f5f5dc",
+                    "secondary": "#ab3600",
+                    "tertiary-container": "#002601",
+                    "on-secondary-container": "#551600",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.grain-overlay {
+    position: relative
+    }
+.grain-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCbQIgSPSCWa7RvasxvUDpUrxNvFW2OqlW3LZNYDFK6dJjLc4d9Td51jWjOk4boYUWAFLM0i7G7CaJTk2P19MqwlDw2xhx19aeiqDfGtlZne4pUwPXhLUJKFbQQkpuwIYxxe_Ze0aemQjyN8mznsNc8v9-PRQXgRVbIP_XtfeiBbdOw0YYA9V4Q6AUhGnXFUJI_70bNjkyq32xd8NPF4yE-kM4kGnK1ecuuXjNSfeEZAuGi4sO2QWkYHpLWx9NFX4EOhL7tBxtN6Xej);
+    opacity: 0.05;
+    pointer-events: none
+    }
+.glass-blur {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="bg-[#FBFBE2]/80 dark:bg-[#100403]/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0px_20px_40px_rgba(44,27,24,0.08)]">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<button class="text-[#100403] dark:text-[#FBFBE2] hover:opacity-70 transition-opacity active:scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-xl font-black tracking-widest text-[#100403] dark:text-[#FBFBE2] font-['Space_Grotesk']">DEOMALI</h1>
+<button class="text-[#100403] dark:text-[#FBFBE2] hover:opacity-70 transition-opacity active:scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</header>
+<main class="pt-16 pb-32">
+<!-- Hero Experience Section -->
+<section class="px-6 py-8">
+<div class="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] grain-overlay group">
+<img class="w-full h-full object-cover" data-alt="dramatic wide angle of a modern brutalist cafe interior with warm espresso wood, neon orange accents, and floor to ceiling windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChzsnRQYRVVxm-1kAAfDV-_Gem9xDpr0bPLaIRuetaWixHC1oR6JJYZkV8RBEKEjEYxUKdWs3XksM8omkwdjcFUHClFhf_BbQoWdhwWoIPFZMiWCfzo5tXv_m3tjkouRgZz8pXUAO130J46FUXpuScD1pevIqrsA7T9YAb2sGnCbW0uLJzIcdrhobPD66fuvWwtRFpgTVQTa4S4O4N6V6xZ2Usx4s57iK_gkJSegvT8vll0svtexlN-ProZsKqiVz3gR6EZ_4pjUZP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8">
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-fixed text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">The Flagship</span>
+<h2 class="font-headline text-5xl font-bold text-white tracking-tighter leading-none mb-2">Urban<br/>Roastery</h2>
+<p class="text-white/80 text-sm max-w-xs font-light">Where the raw ritual of roasting meets the electric energy of the city.</p>
+</div>
+</div>
+</section>
+<!-- Vertical Experience Gallery (Organic Brutalism) -->
+<section class="px-6 space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-3xl overflow-hidden aspect-square">
+<img class="w-full h-full object-cover" data-alt="close up of a professional espresso machine chrome details reflecting warm café lighting and steam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqJOS9r6evNZ9vNZ5cSFQDQFbZvlPZ1qO4De-WjTqqMFRI5LOD3_B18M70YA4BsJIYMG11qPkuLS-WSMwy3tsn13myKl9y646Z0sS-vT092bP862K3wO__hq4wuCdOFB8y0OfLGrMecPtma73B74RUNM_fOOWye0gAU9moL04L7SQJnci7lI1mSbnayT2O8N_0uwYIdhPkdovn2gTi9WowG1_zsG25c-HR2XgbhPtz2elJtWbVyPXjxmpTkVzZZPOomdLkPKtgGbJS"/>
+</div>
+<div class="rounded-3xl overflow-hidden aspect-square mt-8">
+<img class="w-full h-full object-cover" data-alt="artistic pour over coffee being prepared with dark roast beans and elegant glass carafe in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApPC-54Ff4EVOtwvHH0tRc0jKh-iPk7ur0jqamj4fkKAc7e284llMOzXFz1lnS6MUGLWEgGppiPyp0rlL3dbAY-WNixrjF5PP0TGRrxqD1g2HxiOA-El6i4EnFwt3XiWxXuxayAZytSy9bgJvpSSmJc1iKXZcEbhpy_AsBGSMcGORUzzbxcrl4GqlUEJbMUCG6gJpfk6hYI2RmudLlDWEygY0a7xnlUnh60f8PLgMym4i4dJL9uyiMu1-O_7vcrHNw6M93xbIAZ1Sv"/>
+</div>
+</div>
+<div class="relative h-64 rounded-3xl overflow-hidden -mt-4">
+<img class="w-full h-full object-cover" data-alt="minimalist interior shot of concrete walls and a single neon orange light strip in a luxury coffee shop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2XhIxlMtzI5khjqn43oGhlzBUHkMJEjVVnw4C-pwKALJZQXMDkuqF5OEERaoOzJRsAJpgzY9MmMqrpkmpoFjvVMJLUbV1M2X8jxr4l90FRWJhEekUoaTV4n0SUYBEUVZVycxSMe9Ts9mzA0-Pl0bYGhlenHwQ3D0jOkZ-sbU83m6rQ_Tz3wVaYL6XWEmbhwCUa3DDt3wbsVxboNr-ZJ7MQJU0ns_9j_CcDXUjv-Et2LCA2WmY6oi3dAe1hu7Det0AjwWbdq7ZYGwI"/>
+<div class="absolute inset-0 flex items-center justify-center glass-blur bg-white/10">
+<p class="font-headline text-2xl font-black text-white italic tracking-widest">SENSORY ROAST</p>
+</div>
+</div>
+</section>
+<!-- Condensed Menu Section -->
+<section class="mt-16 px-6">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 class="font-headline text-4xl font-bold tracking-tighter text-primary">Daily Brews</h3>
+<p class="text-secondary font-bold text-xs uppercase tracking-widest mt-1">Limited Selection</p>
+</div>
+<button class="font-label text-xs font-bold uppercase tracking-widest border-b-2 border-secondary pb-1">View Full</button>
+</div>
+<div class="space-y-2">
+<!-- Menu Item 1 -->
+<div class="flex items-center justify-between p-5 bg-surface-container-low rounded-[1.5rem] group hover:bg-surface-container-highest transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined" data-icon="coffee">coffee</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Neon Espresso</h4>
+<p class="text-xs text-on-surface-variant font-medium">Double Shot / Citrus Notes</p>
+</div>
+</div>
+<span class="font-headline font-bold text-primary">$4.50</span>
+</div>
+<!-- Menu Item 2 -->
+<div class="flex items-center justify-between p-5 bg-surface-container-highest rounded-[1.5rem]">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined" data-icon="local_fire_department">local_fire_department</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Signature Cold Brew</h4>
+<p class="text-xs text-on-surface-variant font-medium">18-Hour Steep / Cacao Finish</p>
+</div>
+</div>
+<span class="font-headline font-bold text-primary">$6.00</span>
+</div>
+<!-- Menu Item 3 -->
+<div class="flex items-center justify-between p-5 bg-surface-container-low rounded-[1.5rem]">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="water_drop">water_drop</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Cloud Oat Latte</h4>
+<p class="text-xs text-on-surface-variant font-medium">Frosted Glass Serve / Organic</p>
+</div>
+</div>
+<span class="font-headline font-bold text-primary">$5.50</span>
+</div>
+</div>
+</section>
+<!-- Location & Directions (Integrated Maps) -->
+<section class="mt-16 px-6">
+<div class="bg-primary text-background rounded-[2.5rem] p-8 grain-overlay overflow-hidden relative">
+<div class="relative z-10">
+<h3 class="font-headline text-3xl font-bold tracking-tighter mb-2">Visit the Lab</h3>
+<p class="text-background/60 text-sm mb-6 max-w-[200px]">Open daily 07:00 — 19:00 for the curious and the devoted.</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container" data-icon="location_on">location_on</span>
+<span class="text-sm font-medium">88 Brutalist Way, Arts District</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container" data-icon="phone">phone</span>
+<span class="text-sm font-medium">+1 (555) DEOMALI</span>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full bg-secondary-container text-on-secondary-fixed py-4 rounded-full font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-2">
+                            Open in Maps
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_outward">arrow_outward</span>
+</button>
+</div>
+</div>
+<!-- Map Visual Representation -->
+<div class="mt-8 rounded-2xl h-48 w-full overflow-hidden grayscale contrast-125 opacity-40">
+<img class="w-full h-full object-cover" data-alt="a stylized dark-themed map showing urban street blocks with a single vibrant orange pin marker" data-location="Los Angeles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClJKAiUDmovLOcpYsPt5QFM2oV10u09ra1g3FzMcZjIzJpL0VAznZUlgGm1QkOzvt0fNvCdpcKYGuLrs3d-uJsyTHlVRYDdNK1ouBPr7FqX1Ui2CNKtWJZGBRPOV_MgbX5Qa3VfQvBGSIZYQZUWmIT7N2nBkCL6AAvl3tfj5Epd9KvpJiDltv5BJtiCU9HXhdsY1fs6rMfaCVPMxiA-yXeCOpGtQmmtXvdZ59o6m_5ka5bUBWYw6G9kFX6vm1Db3EMEYgOOsdJ2r7N"/>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component) -->
+<footer class="bg-[#100403] dark:bg-[#000A00] w-full pt-12 pb-32 px-6 flex flex-col items-center gap-6 text-center mt-12">
+<span class="font-['Space_Grotesk'] font-bold text-[#FE5E1E] text-2xl tracking-widest">DEOMALI</span>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-xs tracking-widest text-[#F5F5DC]/60 hover:text-[#FE5E1E] transition-colors" href="#">Sourcing</a>
+<a class="font-['Manrope'] text-xs tracking-widest text-[#F5F5DC]/60 hover:text-[#FE5E1E] transition-colors" href="#">Brew Guides</a>
+<a class="font-['Manrope'] text-xs tracking-widest text-[#F5F5DC]/60 hover:text-[#FE5E1E] transition-colors" href="#">Contact</a>
+</div>
+<p class="font-['Manrope'] text-xs tracking-widest text-[#FBFBE2] opacity-40">© 2024 DEOMALI ROASTERS</p>
+</footer>
+</main>
+<!-- BottomNavBar (Shared Component) -->
+<nav class="bg-[#FBFBE2]/90 dark:bg-[#100403]/90 backdrop-blur-md fixed bottom-0 left-0 w-full flex justify-around items-center px-8 pb-6 pt-3 rounded-t-[2rem] z-50 shadow-[0px_-10px_30px_rgba(44,27,24,0.05)] md:hidden">
+<a class="flex items-center justify-center text-[#2C1B18] dark:text-[#F5F5DC] w-12 h-12 hover:scale-110 transition-transform active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</a>
+<a class="flex items-center justify-center bg-[#FE5E1E] text-[#FBFBE2] rounded-full w-12 h-12 hover:scale-110 transition-transform active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+</a>
+<a class="flex items-center justify-center text-[#2C1B18] dark:text-[#F5F5DC] w-12 h-12 hover:scale-110 transition-transform active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="local_fire_department">local_fire_department</span>
+</a>
+<a class="flex items-center justify-center text-[#2C1B18] dark:text-[#F5F5DC] w-12 h-12 hover:scale-110 transition-transform active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</a>
+</nav>
+</body></html>

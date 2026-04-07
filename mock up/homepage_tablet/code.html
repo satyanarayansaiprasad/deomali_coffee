@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#57423e",
+                    "error": "#ba1a1a",
+                    "surface-container": "#efefd7",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#705955",
+                    "inverse-surface": "#303221",
+                    "primary-fixed-dim": "#dec0bb",
+                    "primary": "#100403",
+                    "on-tertiary-fixed-variant": "#005307",
+                    "on-tertiary-container": "#349a30",
+                    "error-container": "#ffdad6",
+                    "background": "#fbfbe2",
+                    "tertiary": "#000a00",
+                    "on-surface": "#1b1d0e",
+                    "on-primary-fixed": "#281714",
+                    "outline-variant": "#d3c3c0",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e4e4cc",
+                    "on-secondary-fixed": "#390c00",
+                    "primary-container": "#2c1b18",
+                    "on-secondary-fixed-variant": "#832700",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#dec0bb",
+                    "on-primary-container": "#9b817c",
+                    "tertiary-fixed-dim": "#77dd6a",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dbdcc3",
+                    "on-surface-variant": "#4f4442",
+                    "primary-fixed": "#fbdcd6",
+                    "secondary-fixed": "#ffdbcf",
+                    "surface-container-high": "#eaead1",
+                    "surface-bright": "#fbfbe2",
+                    "outline": "#817472",
+                    "surface": "#fbfbe2",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1d0e",
+                    "secondary-fixed-dim": "#ffb59c",
+                    "tertiary-fixed": "#92fa83",
+                    "surface-container-highest": "#e4e4cc",
+                    "on-tertiary-fixed": "#002201",
+                    "secondary-container": "#fe5e1e",
+                    "inverse-on-surface": "#f2f2d9",
+                    "surface-container-low": "#f5f5dc",
+                    "secondary": "#ab3600",
+                    "tertiary-container": "#002601",
+                    "on-secondary-container": "#551600",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grainy-surface {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.05;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#FBFBE2]/80 backdrop-blur-xl flex justify-between items-center px-10 py-6 max-w-full">
+<div class="text-2xl font-black text-[#100403] tracking-tighter font-['Space_Grotesk']">
+            The Sensory Roast
+        </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#100403] opacity-80 font-['Space_Grotesk'] tracking-tight font-bold uppercase hover:opacity-100 hover:text-[#AB3600] transition-all duration-300" href="#">Roastery</a>
+<a class="text-[#100403] opacity-80 font-['Space_Grotesk'] tracking-tight font-bold uppercase hover:opacity-100 hover:text-[#AB3600] transition-all duration-300" href="#">Subscriptions</a>
+<a class="text-[#100403] opacity-80 font-['Space_Grotesk'] tracking-tight font-bold uppercase hover:opacity-100 hover:text-[#AB3600] transition-all duration-300" href="#">Experience</a>
+<a class="text-[#100403] opacity-80 font-['Space_Grotesk'] tracking-tight font-bold uppercase hover:opacity-100 hover:text-[#AB3600] transition-all duration-300" href="#">Our Story</a>
+</nav>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#100403] cursor-pointer scale-95 duration-200 ease-in-out hover:text-secondary" data-icon="shopping_bag">shopping_bag</span>
+<span class="material-symbols-outlined text-[#100403] cursor-pointer scale-95 duration-200 ease-in-out hover:text-secondary" data-icon="person">person</span>
+</div>
+</header>
+<!-- SideNavBar (Tablet/Desktop Focus) -->
+<aside class="fixed left-0 top-0 h-full z-40 pt-24 bg-[#F5F5DC] h-full w-72 rounded-r-none shadow-2xl shadow-[#2C1B18]/10 hidden lg:flex flex-col">
+<div class="px-8 mb-12">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-primary-container">
+<img alt="Brew Master" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional coffee roaster with a focused expression, warm workshop lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr_pU6WftNz0xdfGUMskswnwvEQm7EPtdBEm8u4SwgprjTO5rubTe6jQJlpYuh9eAY1n3FNSxXToq-XPwOBWaivOoLKREwhQDTx_M--79cZuaMs4agELEQkDUelyO74EwThnh0KFht4OfupbQcNpk9S8pkSN6GpokSkGFGlzJFNn3GGbpQ6Ks6NqJczK-Py3YQZWKtgyLNK21DB0p3jW3XXeB03YXmKmjBvQFOqmT_W3nKO4Sl2wTMctNEGPsVaRj_Qz_KV3Xo21rk"/>
+</div>
+<div>
+<h3 class="font-['Space_Grotesk'] font-bold text-[#100403]">Brew Master</h3>
+<p class="text-xs text-on-surface-variant font-medium">Premium Member</p>
+</div>
+</div>
+<button class="w-full py-3 bg-secondary-container text-on-secondary-fixed rounded-full font-bold text-sm tracking-wide">Join the Club</button>
+</div>
+<nav class="flex-1 flex flex-col gap-2 px-4">
+<a class="flex items-center gap-4 px-4 py-4 bg-[#EAEA1D] text-[#100403] rounded-none font-bold font-['Space_Grotesk'] text-lg transition-transform duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="local_cafe">local_cafe</span>
+                Shop All
+            </a>
+<a class="flex items-center gap-4 px-4 py-4 text-[#100403] opacity-80 hover:bg-[#EAEA1D]/20 transition-transform duration-300 hover:translate-x-2 font-['Space_Grotesk'] text-lg" href="#">
+<span class="material-symbols-outlined" data-icon="Stars">stars</span>
+                Micro-Lots
+            </a>
+<a class="flex items-center gap-4 px-4 py-4 text-[#100403] opacity-80 hover:bg-[#EAEA1D]/20 transition-transform duration-300 hover:translate-x-2 font-['Space_Grotesk'] text-lg" href="#">
+<span class="material-symbols-outlined" data-icon="coffee_maker">coffee_maker</span>
+                Brew Gear
+            </a>
+<a class="flex items-center gap-4 px-4 py-4 text-[#100403] opacity-80 hover:bg-[#EAEA1D]/20 transition-transform duration-300 hover:translate-x-2 font-['Space_Grotesk'] text-lg" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+                Wholesale
+            </a>
+<a class="flex items-center gap-4 px-4 py-4 text-[#100403] opacity-80 hover:bg-[#EAEA1D]/20 transition-transform duration-300 hover:translate-x-2 font-['Space_Grotesk'] text-lg" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+                Journal
+            </a>
+</nav>
+</aside>
+<!-- Main Canvas -->
+<main class="lg:ml-72 pt-28 pb-0">
+<!-- Hero Section: Editorial Asymmetry -->
+<section class="px-6 lg:px-12 mb-24 relative overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-7 z-10">
+<h1 class="font-headline text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] font-black tracking-tighter text-primary mb-8">
+                        RAW.<br/>TACTILE.<br/><span class="text-secondary">ROASTED.</span>
+</h1>
+<p class="max-w-md text-lg md:text-xl font-medium leading-relaxed text-on-surface-variant mb-10">
+                        Bridging the gap between the grounded earth and the electric modern pulse. Our beans are hand-selected, small-batch roasted, and unapologetically bold.
+                    </p>
+<div class="flex items-center gap-6">
+<button class="bg-secondary-container text-on-secondary-fixed px-10 py-5 rounded-full font-black text-lg tracking-tight hover:scale-105 transition-transform duration-300">EXPLORE COLLECTIONS</button>
+<a class="font-label text-sm font-extrabold uppercase tracking-widest border-b-2 border-secondary pb-1" href="#">Our Process</a>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] rounded-[2rem] overflow-hidden bg-primary-container relative">
+<img alt="Coffee Pour" class="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700" data-alt="Overhead dramatic shot of coffee being poured into a textured ceramic cup, steam rising, high contrast aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVDWh6oyv3GmZ0AV4PkwcHL-Z1qiZMLu5jomW-WBQrcYCpIYlL97yyuDnGWbkAqMq5Ty2xmyo2UxVqp3stbT6ytPU4q2dMJ_33At75aJkZ6OFI2iZm15bGsRsUNaqpggXuOnuQueciLJUkVten3P14sMzJIgzFnD0fR3uweAQxu1TJtZlQaMBHxqOd2lswWHVkdY3mcBVyCxGUsPgQxXpsMY47ubggCk_cEpBWYP5vKVKo_ZXooHnIXYQdACFRENhnSQB6PDy-0lWA"/>
+<div class="absolute inset-0 grainy-surface"></div>
+<!-- Glassmorphic Tag -->
+<div class="absolute bottom-6 left-6 right-6 bg-white/20 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
+<p class="font-headline font-bold text-white text-xl">The Winter Micro-Lot</p>
+<p class="font-label text-white/80 text-xs uppercase tracking-widest mt-1">High Altitude • Ethiopia</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Sensory Highlights -->
+<section class="px-6 lg:px-12 mb-32">
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 min-h-[600px]">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-high p-12 rounded-[2.5rem] flex flex-col justify-between relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline text-5xl font-black tracking-tight mb-4 text-primary">THE CRAFT</h2>
+<p class="text-on-surface-variant text-lg">Every bean is roasted to its peak sensory threshold using our proprietary thermodynamic profile.</p>
+</div>
+<div class="relative z-10 mt-12">
+<button class="flex items-center gap-2 font-label font-bold text-secondary uppercase tracking-widest">
+                            Watch the film
+                            <span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+</button>
+</div>
+<div class="absolute bottom-[-10%] right-[-10%] w-2/3 opacity-20">
+<img alt="Coffee Bean Detail" class="w-full h-full object-cover" data-alt="Macro photography of roasted coffee beans with glistening oil on the surface, deep brown tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4_ATYrvuZ1JREU0zmK1xNYjwXDTDrdV075nG-2Q7rrS0W0nbxC-Xvi99dnakcQATTWkAQP-Gm27hIlyAuw3gSykN9IjBMTiporKTuRrzt8e3ik98axlMx5HVANKJfb_EulW_KxuUN7fsdDNggZ4rqjdHdNXhJOnJ7FmOIm2JwJvBDS01mukGABTwL8eTMqUvLz1S_I_tBLbA_LYN7lyXpLr1W8AUhghhtzLdnJ6Wstq4W1BKUcCJqtBPFe1dkHZdpg1r4hkkSRKUj"/>
+</div>
+</div>
+<div class="md:col-span-2 bg-primary-container p-10 rounded-[2.5rem] flex items-center justify-between group overflow-hidden">
+<div>
+<h3 class="font-headline text-3xl font-bold text-white mb-2">SUBSCRIPTION</h3>
+<p class="text-on-primary-container">Never run out of the ritual.</p>
+</div>
+<div class="w-24 h-24 rounded-full bg-secondary-container flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-on-secondary-fixed text-4xl" data-icon="autorenew">autorenew</span>
+</div>
+</div>
+<div class="md:col-span-1 bg-surface-container p-8 rounded-[2.5rem] flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4" data-icon="eco">eco</span>
+<h4 class="font-headline font-bold text-primary">100% ORGANIC</h4>
+<p class="text-xs font-label uppercase tracking-tighter mt-2">Certified Origin</p>
+</div>
+<div class="md:col-span-1 bg-surface-container-highest p-8 rounded-[2.5rem] flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4" data-icon="schedule">schedule</span>
+<h4 class="font-headline font-bold text-primary">FAST BREW</h4>
+<p class="text-xs font-label uppercase tracking-tighter mt-2">Express Shipping</p>
+</div>
+</div>
+</section>
+<!-- Product Carousel Style: Featured Collections -->
+<section class="bg-primary-container py-24 mb-0">
+<div class="px-6 lg:px-12 flex justify-between items-end mb-16">
+<div>
+<span class="text-secondary font-label text-sm font-black uppercase tracking-[0.3em] mb-4 block">Current Selection</span>
+<h2 class="font-headline text-5xl md:text-6xl font-black text-white leading-none">THE BREW<br/>LIST</h2>
+</div>
+<div class="flex gap-4">
+<button class="w-14 h-14 rounded-full border border-on-primary-container flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<button class="w-14 h-14 rounded-full border border-on-primary-container flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex gap-8 px-6 lg:px-12 overflow-x-auto no-scrollbar pb-12">
+<!-- Coffee Card 1 -->
+<div class="min-w-[320px] md:min-w-[400px]">
+<div class="aspect-square rounded-3xl overflow-hidden mb-6 relative group">
+<img alt="Midnight Blend" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Dark roasted coffee beans in a stylish minimalist bag, moody dramatic lighting, deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwc5Lnu4WjRkdR3u7_nwvI1_4HKb6JJbEQjvTX9hDT8A-ZtH3BrcZqawPZps462KBLnG0xJqiFj1Vax5UVLbceuDV5SPeH65_g_ySNstrGsinOpQjK_UNCxx32VvBRKZ9LgoGzwjRlUHnNmikRnSIuh9-x47gLApZnl6-34kR0ZUfSgnOJ_4O8cd50nuDdVqf4w58E-1E4ZN8o4rzj4wz5XUXn1vfe5f_aHRyBL4sO8pi_Dbn8lN_y85VXy8M2-Zo-rc6OaM1Uffdv"/>
+<div class="absolute top-6 left-6 bg-secondary-container text-on-secondary-fixed text-[10px] font-black uppercase px-3 py-1 rounded-full">New Batch</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold text-white uppercase tracking-tight">Midnight Roast</h3>
+<p class="text-on-primary-container text-sm font-label mt-1">Smoked Oak, Dark Cocoa, Molasses</p>
+</div>
+<p class="font-headline font-bold text-secondary text-2xl">$28</p>
+</div>
+</div>
+<!-- Coffee Card 2 -->
+<div class="min-w-[320px] md:min-w-[400px]">
+<div class="aspect-square rounded-3xl overflow-hidden mb-6 relative group">
+<img alt="Alpine Light" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Light roast coffee beans on a marble surface with soft morning light and a sprig of greenery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLqEw-40CBnZqwEW5VuvKiEPHpatfgu8MM_-9w368tAdPMjibZp0h93rCL2G93zilA9PEJycPP44nHvZol07UvetrgqNrF-WPBEzuVsGiEoeLtYGxHySRq_-R23-EKJcRlw3tHRRNAI_daGKQAUvqABdqP6IXmkd6csYrJ5QuZWkT-1kPuhLpCkl8pNdJsRd0EkM7M1ho_ArYm_w05vi-KMVvbmIXlpcyVT1nax0Dab9-p3eyH8PSEfUw3gPB0Y2Bn_-2Ql3QRPFUO"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold text-white uppercase tracking-tight">Alpine Dawn</h3>
+<p class="text-on-primary-container text-sm font-label mt-1">Citrus Zest, Jasmine, Honeysuckle</p>
+</div>
+<p class="font-headline font-bold text-secondary text-2xl">$32</p>
+</div>
+</div>
+<!-- Coffee Card 3 -->
+<div class="min-w-[320px] md:min-w-[400px]">
+<div class="aspect-square rounded-3xl overflow-hidden mb-6 relative group">
+<img alt="Equator Sun" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Medium roast coffee beans being held in cupped hands, natural earthy colors, warm golden hour sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDlibX_iLAZNM6xYfpvjXMJguraSVA3tPvanGkzu41GJchqk3nD6Cg0bazRSF83FcORUzZ1qV42ZHppFg_EInkLYU2jdIps5XypGp0ex6vX94pbF_j5bL2Ze7eids_Ps0NxOkW1rnUR4RlqpqQCPQJVR30TeVcfBsjQs8IAEDIxwFGtzuIZ5NBE2c9gPITediSQDFpGmp-uXXE8Ugi6EZQiduIszdlgBEvomOUefiU-_Kvg8QKFVzG4tCpR9HtECHc4ZuYvJq6YeZr"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold text-white uppercase tracking-tight">Equator Sun</h3>
+<p class="text-on-primary-container text-sm font-label mt-1">Caramelized Peach, Nutmeg, Brown Sugar</p>
+</div>
+<p class="font-headline font-bold text-secondary text-2xl">$24</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Roast Slider Component: Interactive Discovery -->
+<section class="px-6 lg:px-12 py-32 bg-surface text-center">
+<h2 class="font-headline text-4xl md:text-5xl font-black mb-16 text-primary tracking-tighter">FIND YOUR PROFILE</h2>
+<div class="max-w-4xl mx-auto">
+<div class="relative h-2 w-full rounded-full bg-gradient-to-r from-[#F5F5DC] via-[#AB3600] to-[#2C1B18] mb-8">
+<div class="absolute top-1/2 left-[40%] -translate-y-1/2 w-8 h-8 rounded-full bg-white border-4 border-secondary-container shadow-xl"></div>
+</div>
+<div class="flex justify-between px-2 text-[10px] md:text-xs font-black uppercase tracking-widest text-on-surface-variant">
+<span>Blonde Roast</span>
+<span>Medium-Dark</span>
+<span>Espresso Finish</span>
+</div>
+<div class="mt-16 p-10 bg-surface-container rounded-[2.5rem] max-w-xl mx-auto">
+<h3 class="font-headline text-3xl font-bold mb-4">THE MID-RANGE SOUL</h3>
+<p class="text-on-surface-variant mb-8">Balanced acidity meets a deep, chocolatey body. Perfect for your morning drip or a complex cold brew.</p>
+<button class="text-secondary font-extrabold uppercase tracking-widest border-b-2 border-secondary">See Matching Beans</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#100403] w-full mt-auto text-[#FBFBE2] flex flex-col md:flex-row justify-between items-center px-10 py-12 gap-6">
+<div class="flex flex-col gap-2">
+<div class="font-['Space_Grotesk'] font-black text-[#FE5E1E] text-2xl tracking-tighter uppercase">THE SENSORY ROAST</div>
+<p class="font-['Manrope'] text-xs uppercase tracking-widest opacity-60">© 2024 THE SENSORY ROAST. ORGANIC BRUTALISM APPLIED.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-[#F5F5DC]/60 hover:text-[#FE5E1E] transition-colors" href="#">Privacy</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-[#F5F5DC]/60 hover:text-[#FE5E1E] transition-colors" href="#">Terms</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-[#F5F5DC]/60 hover:text-[#FE5E1E] transition-colors" href="#">Shipping</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-[#F5F5DC]/60 hover:text-[#FE5E1E] transition-colors" href="#">Accessibility</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-secondary-container transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="public">public</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-secondary-container transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</div>
+</div>
+</footer>
+</main>
+<!-- BottomNavBar for Mobile/Tablet -->
+<nav class="fixed bottom-0 left-0 right-0 h-20 bg-surface/80 backdrop-blur-xl md:hidden z-50 flex items-center justify-around px-4">
+<a class="flex flex-col items-center gap-1 text-secondary" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface/60" href="#">
+<span class="material-symbols-outlined" data-icon="local_cafe">local_cafe</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Shop</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface/60" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Faves</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface/60" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_basket">shopping_basket</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Cart</span>
+</a>
+</nav>
+</body></html>

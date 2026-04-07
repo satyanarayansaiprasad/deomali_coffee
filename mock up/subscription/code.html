@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#fbfbe2",
+              "secondary": "#ab3600",
+              "tertiary-fixed-dim": "#77dd6a",
+              "on-tertiary-fixed": "#002201",
+              "inverse-on-surface": "#f2f2d9",
+              "on-primary-fixed-variant": "#57423e",
+              "tertiary-container": "#002601",
+              "primary-fixed-dim": "#dec0bb",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              "surface-container-low": "#f5f5dc",
+              "on-background": "#1b1d0e",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#390c00",
+              "secondary-fixed-dim": "#ffb59c",
+              "secondary-container": "#fe5e1e",
+              "on-primary": "#ffffff",
+              "surface-bright": "#fbfbe2",
+              "primary-fixed": "#fbdcd6",
+              "error": "#ba1a1a",
+              "on-primary-fixed": "#281714",
+              "tertiary": "#000a00",
+              "on-primary-container": "#9b817c",
+              "inverse-primary": "#dec0bb",
+              "on-tertiary-container": "#349a30",
+              "tertiary-fixed": "#92fa83",
+              "on-surface-variant": "#4f4442",
+              "surface-tint": "#705955",
+              "on-secondary-fixed-variant": "#832700",
+              "surface-dim": "#dbdcc3",
+              "on-error-container": "#93000a",
+              "on-secondary-container": "#551600",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#e4e4cc",
+              "primary": "#100403",
+              "surface-container-highest": "#e4e4cc",
+              "outline": "#817472",
+              "outline-variant": "#d3c3c0",
+              "primary-container": "#2c1b18",
+              "on-surface": "#1b1d0e",
+              "surface-container-high": "#eaead1",
+              "on-tertiary-fixed-variant": "#005307",
+              "surface": "#fbfbe2",
+              "secondary-fixed": "#ffdbcf",
+              "surface-container": "#efefd7",
+              "error-container": "#ffdad6",
+              "inverse-surface": "#303221"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>.glass-effect {
+    backdrop-filter: blur(20px);
+    background: rgba(251, 251, 226, 0.8)
+    }
+.grain-texture {
+    position: relative
+    }
+.grain-texture::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    pointer-events: none;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCDkYIaNJkEFBg9s89WAYewSAeRsjxRql-jaNBOiN3zKpUuHi_30YQ0veQeFTYMXX8v6Uood-Sum9HMw_h19NcPsO3ORp81F9tpWV5olAVrgh5YCiWV1fACvTBW787zrJV24fwPDIfsTkEqzKjI6kSBYay8OlfeVNuR1qk0R176nRwPNy3_X0PzPcu4cqB_zGQRRqVj26-dg4UpyelFBR4SktSFtdzS4-ZVdU6M5A2rSn5XGyUM_q-hjB52nVXss0CJRRlZwi5kRtWm)
+    }
+.brutalist-shadow {
+    box-shadow: 0 20px 40px rgba(44, 27, 24, 0.08)
+    }</style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-[#100403]/80 backdrop-blur-xl shadow-[0px_20px_40px_rgba(44,27,24,0.08)]">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-[#100403] dark:text-stone-50 font-headline">Deomali Coffee</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-stone-400 hover:text-[#AB3600] transition-opacity duration-300" href="#">Shop</a>
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-stone-400 hover:text-[#AB3600] transition-opacity duration-300" href="#">About</a>
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-stone-400 hover:text-[#AB3600] transition-opacity duration-300" href="#">Café</a>
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-[#AB3600] dark:text-[#FE5E1E] border-b-2 border-[#AB3600] pb-1 transition-opacity duration-300" href="#">Subscription</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="scale-95 active:scale-90 transition-transform text-[#AB3600] dark:text-[#FE5E1E]">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="relative px-6 py-20 max-w-7xl mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="font-headline font-bold uppercase tracking-widest text-secondary text-sm mb-4 block">Membership Experience</span>
+<h1 class="font-headline text-6xl md:text-8xl font-black text-primary leading-[0.9] tracking-tighter mb-8">
+                        BREWED FOR <br/>THE BOLD.
+                    </h1>
+<p class="text-xl text-on-surface-variant max-w-md mb-10 leading-relaxed">
+                        Join an elite collective of coffee purists. Freshly roasted, ethically sourced, and delivered to your doorstep with surgical precision.
+                    </p>
+<a class="inline-flex items-center justify-center px-8 py-4 bg-secondary-container text-on-secondary-fixed font-headline font-bold rounded-full hover:opacity-90 transition-all scale-100 active:scale-95 brutalist-shadow" href="#plans">
+                        Start Your Coffee Journey
+                    </a>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-xl overflow-hidden brutalist-shadow rotate-3 transform hover:rotate-0 transition-transform duration-500">
+<img alt="Premium dark roasted coffee beans in a minimalist matte black bag" class="w-full h-full object-cover" data-alt="close-up of premium dark roasted coffee beans pouring into a minimalist matte black bag with warm cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjDTXiXV_35OcurfzFqaRX47CZm2cl8FZbA0oOrFAJBifyyGpF3QNXW9NngFVQLMwEVpmojl-IY7G7ARG5ttvuitFLJOhd553EHE28aeKcG5oxkWuY39ZhVmTgW5q8hkNREYXLDUMppctpMEUBwJTecuWgLZZRC8YofgA2evGXVUN7IOP0i6A9jQphlfArfDga_nZkA1ApJwdBwveZXj8k1DV1xxYZKFHn-65vQeTPjAmJ8a0lZ-b9MCbWjdOOsOdOGJNAXdAu8iQW"/>
+</div>
+<div class="absolute -bottom-6 -left-6 glass-effect p-6 rounded-xl brutalist-shadow max-w-xs hidden md:block">
+<div class="flex gap-2 mb-2 text-secondary">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline font-bold text-primary italic">"The most consistent roast profile I've ever experienced."</p>
+<span class="text-xs text-on-surface-variant uppercase mt-2 block tracking-widest">— Marcus T., Connoisseur Member</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Bento Grid -->
+<section class="bg-surface-container-low py-24 px-6 grain-texture">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<h2 class="font-headline text-4xl md:text-5xl font-black text-primary tracking-tighter uppercase">Member Privileges</h2>
+<div class="h-px bg-outline-variant flex-grow mx-8 hidden md:block opacity-30"></div>
+<p class="font-body text-on-surface-variant max-w-xs text-right italic">Beyond the bean. Access the culture.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-8 bg-surface-container-highest rounded-xl flex flex-col justify-between group hover:bg-primary-container transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-secondary-container mb-12" data-icon="temp_preferences_custom">temp_preferences_custom</span>
+<div>
+<h3 class="font-headline text-2xl font-bold text-primary group-hover:text-surface mb-2">Exclusive Roasts</h3>
+<p class="text-on-surface-variant group-hover:text-stone-400">Monthly small-batch micro-lots reserved only for our subscription members.</p>
+</div>
+</div>
+<div class="p-8 bg-surface-container-highest rounded-xl flex flex-col justify-between group hover:bg-primary-container transition-colors duration-300 md:translate-y-6">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-secondary-container mb-12" data-icon="schedule">schedule</span>
+<div>
+<h3 class="font-headline text-2xl font-bold text-primary group-hover:text-surface mb-2">Early Access</h3>
+<p class="text-on-surface-variant group-hover:text-stone-400">First dibs on limited edition merch, equipment drops, and seasonal café events.</p>
+</div>
+</div>
+<div class="p-8 bg-surface-container-highest rounded-xl flex flex-col justify-between group hover:bg-primary-container transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-secondary-container mb-12" data-icon="percent">percent</span>
+<div>
+<h3 class="font-headline text-2xl font-bold text-primary group-hover:text-surface mb-2">Member Discounts</h3>
+<p class="text-on-surface-variant group-hover:text-stone-400">Enjoy 15% off all retail purchases and complimentary upgrades in our physical shops.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Tiers -->
+<section class="py-24 px-6 max-w-7xl mx-auto" id="plans">
+<div class="text-center mb-20">
+<h2 class="font-headline text-5xl md:text-6xl font-black text-primary tracking-tighter mb-4">CHOOSE YOUR INTENSITY</h2>
+<div class="w-24 h-2 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+<!-- Basic Plan -->
+<div class="bg-surface-container-low p-8 rounded-xl brutalist-shadow border-t-8 border-outline-variant">
+<span class="text-xs font-headline font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-4 block">Level 01</span>
+<h3 class="font-headline text-3xl font-black text-primary mb-2">Basic</h3>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="text-4xl font-headline font-black text-primary">$29</span>
+<span class="text-on-surface-variant">/mo</span>
+</div>
+<ul class="space-y-4 mb-10 text-sm font-medium">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+                            1 x 250g Signature Bag
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+                            Standard Shipping
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+                            Brewing Guides (Digital)
+                        </li>
+</ul>
+<button class="w-full py-4 border-2 border-primary text-primary font-headline font-bold rounded-full hover:bg-primary hover:text-surface transition-all uppercase tracking-wider text-xs">Select Plan</button>
+</div>
+<!-- Enthusiast Plan -->
+<div class="bg-primary-container p-8 rounded-xl brutalist-shadow border-t-8 border-secondary-container relative lg:-mt-6 grain-texture">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary-container text-on-secondary-fixed px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Most Popular</div>
+<span class="text-xs font-headline font-bold uppercase tracking-[0.2em] text-stone-400 mb-4 block">Level 02</span>
+<h3 class="font-headline text-3xl font-black text-surface mb-2">Enthusiast</h3>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="text-4xl font-headline font-black text-secondary-container">$55</span>
+<span class="text-stone-400">/mo</span>
+</div>
+<ul class="space-y-4 mb-10 text-sm font-medium text-stone-300">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-lg" data-icon="verified">verified</span>
+                            2 x 250g Custom Roasts
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-lg" data-icon="verified">verified</span>
+                            Priority Express Shipping
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-lg" data-icon="verified">verified</span>
+                            Early Micro-lot Access
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-lg" data-icon="verified">verified</span>
+                            10% Off All Merch
+                        </li>
+</ul>
+<button class="w-full py-4 bg-secondary-container text-on-secondary-fixed font-headline font-bold rounded-full hover:opacity-90 transition-all uppercase tracking-wider text-xs">Select Plan</button>
+</div>
+<!-- Connoisseur Plan -->
+<div class="bg-surface-container-low p-8 rounded-xl brutalist-shadow border-t-8 border-primary">
+<span class="text-xs font-headline font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-4 block">Level 03</span>
+<h3 class="font-headline text-3xl font-black text-primary mb-2">Connoisseur</h3>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="text-4xl font-headline font-black text-primary">$89</span>
+<span class="text-on-surface-variant">/mo</span>
+</div>
+<ul class="space-y-4 mb-10 text-sm font-medium">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="hotel_class">hotel_class</span>
+                            3 x 250g Rare Origins
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="hotel_class">hotel_class</span>
+                            Free Global Courier
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="hotel_class">hotel_class</span>
+                            Quarterly Tasting Kit
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="hotel_class">hotel_class</span>
+                            VIP Concierge Support
+                        </li>
+</ul>
+<button class="w-full py-4 border-2 border-primary text-primary font-headline font-bold rounded-full hover:bg-primary hover:text-surface transition-all uppercase tracking-wider text-xs">Select Plan</button>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-6 py-20">
+<div class="max-w-7xl mx-auto bg-surface-container-highest rounded-[2rem] overflow-hidden grid grid-cols-1 md:grid-cols-2 brutalist-shadow">
+<div class="p-12 md:p-20 flex flex-col justify-center">
+<h2 class="font-headline text-4xl md:text-5xl font-black text-primary tracking-tighter mb-6 leading-none">READY TO ELEVATE YOUR RITUAL?</h2>
+<p class="text-on-surface-variant mb-8 text-lg">Your subscription is fully flexible. Pause, skip, or cancel anytime. No questions asked.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-8 py-4 bg-primary text-surface font-headline font-bold rounded-full hover:opacity-90 transition-all uppercase tracking-widest text-sm">Join The Collective</button>
+<button class="px-8 py-4 border-2 border-primary text-primary font-headline font-bold rounded-full hover:bg-primary/5 transition-all uppercase tracking-widest text-sm">Contact Concierge</button>
+</div>
+</div>
+<div class="relative min-h-[400px]">
+<img alt="Cinematic shot of coffee extraction from a professional espresso machine" class="absolute inset-0 w-full h-full object-cover" data-alt="dramatic close-up of golden espresso crema pouring from a chrome portafilter with steam and dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuU_m_XLaWsEbWPtiKquJqHZrtyC68pubdLNSaa37a3kqYLVBiJqhbNkDgT_2tLkOwavSaJZ5DE1TAMD7wYF__987sdsc71JlgeYoq_pmAy2C_C3MMBv_Vjn9I4V5-NhBq1yDf3JKAC-7FFFqJEhuZzUkzX5D9qpFqlMpkqQytAwdWVC-Tw2wBRaRiguUCij2JerX69XuRg70VezD-4b14ueghwbTSCosJK2TLuhgGy-YcMeYPAzSg2jPsQyPNd91SCVoEXe0BTNQO"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#2C1B18] dark:bg-[#100403] w-full relative overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 w-full max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<span class="text-3xl font-black text-stone-50 mb-4 block font-headline">DEOMALI</span>
+<p class="font-['Manrope'] text-sm tracking-wide text-stone-400 leading-relaxed">
+                    © 2024 DEOMALI COFFEE. BREWED FOR THE BOLD.
+                </p>
+</div>
+<div>
+<h4 class="font-headline text-stone-50 font-bold mb-6 uppercase tracking-widest text-xs">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 font-['Manrope'] text-sm block" href="#">Brew Guides</a></li>
+<li><a class="text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 font-['Manrope'] text-sm block" href="#">Wholesale</a></li>
+<li><a class="text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 font-['Manrope'] text-sm block" href="#">Locations</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline text-stone-50 font-bold mb-6 uppercase tracking-widest text-xs">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 font-['Manrope'] text-sm block" href="#">Privacy</a></li>
+<li><a class="text-stone-400 hover:text-stone-50 hover:translate-x-1 transition-transform duration-200 font-['Manrope'] text-sm block" href="#">Terms</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline text-stone-50 font-bold mb-6 uppercase tracking-widest text-xs">Social</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-stone-700 flex items-center justify-center text-stone-400 hover:bg-secondary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="language">language</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-stone-700 flex items-center justify-center text-stone-400 hover:bg-secondary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="coffee">coffee</span>
+</a>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 right-0 opacity-[0.03] pointer-events-none -mr-20 -mb-20">
+<span class="text-[20rem] font-black text-stone-50 leading-none tracking-tighter">DEOMALI</span>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#fbfbe2",
+              "secondary": "#ab3600",
+              "tertiary-fixed-dim": "#77dd6a",
+              "on-tertiary-fixed": "#002201",
+              "inverse-on-surface": "#f2f2d9",
+              "on-primary-fixed-variant": "#57423e",
+              "tertiary-container": "#002601",
+              "primary-fixed-dim": "#dec0bb",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              "surface-container-low": "#f5f5dc",
+              "on-background": "#1b1d0e",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#390c00",
+              "secondary-fixed-dim": "#ffb59c",
+              "secondary-container": "#fe5e1e",
+              "on-primary": "#ffffff",
+              "surface-bright": "#fbfbe2",
+              "primary-fixed": "#fbdcd6",
+              "error": "#ba1a1a",
+              "on-primary-fixed": "#281714",
+              "tertiary": "#000a00",
+              "on-primary-container": "#9b817c",
+              "inverse-primary": "#dec0bb",
+              "on-tertiary-container": "#349a30",
+              "tertiary-fixed": "#92fa83",
+              "on-surface-variant": "#4f4442",
+              "surface-tint": "#705955",
+              "on-secondary-fixed-variant": "#832700",
+              "surface-dim": "#dbdcc3",
+              "on-error-container": "#93000a",
+              "on-secondary-container": "#551600",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#e4e4cc",
+              "primary": "#100403",
+              "surface-container-highest": "#e4e4cc",
+              "outline": "#817472",
+              "outline-variant": "#d3c3c0",
+              "primary-container": "#2c1b18",
+              "on-surface": "#1b1d0e",
+              "surface-container-high": "#eaead1",
+              "on-tertiary-fixed-variant": "#005307",
+              "surface": "#fbfbe2",
+              "secondary-fixed": "#ffdbcf",
+              "surface-container": "#efefd7",
+              "error-container": "#ffdad6",
+              "inverse-surface": "#303221"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.glass-card {
+    backdrop-filter: blur(16px);
+    background: rgba(251, 251, 226, 0.8)
+    }
+.no-scrollbar::-webkit-scrollbar {
+    display: none
+    }
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none
+    }
+.grain-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDq47_36TywqgXdqH43rHskZt9knCPbbKD5Cgs72XKSklk7g-_zXJ1VhlKHW8NGBguMdpTO5ltxreih8OuUXWs5C4QO0JjUF-b_zhOcSO6TWYXER_qXiiXkziQhuEl5FkHluMHEQf_eM2K-KzCQKWy92JX236r4-Pgodw9Vpqul8-HiDtknQATtoj1IYIELDTFGIhJTfuP_0apzhdnNCCISeD8ebcVXwEqiCsm-1IsDSY9pEQu77Yu18vIUa5ZntDi6mzn7ogr0Znvf);
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 10
+    }</style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 backdrop-blur-xl shadow-[0px_20px_40px_rgba(44,27,24,0.08)]">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<span class="text-2xl font-black tracking-tighter text-primary">Deomali Coffee</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-primary hover:text-secondary transition-opacity duration-300" href="#">Shop</a>
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-primary hover:text-secondary transition-opacity duration-300" href="#">About</a>
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-secondary border-b-2 border-secondary pb-1 transition-opacity duration-300" href="#">Café</a>
+<a class="font-headline font-bold tracking-tight text-sm uppercase text-primary hover:text-secondary transition-opacity duration-300" href="#">Subscription</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary scale-95 active:scale-90 transition-transform">shopping_bag</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section: The Vibe -->
+<section class="relative h-[921px] overflow-hidden">
+<img alt="Modern aesthetic cafe interior with warm lighting, wood accents, and lush green plants" class="absolute inset-0 w-full h-full object-cover" data-alt="Modern aesthetic cafe interior with warm lighting, wood accents, and minimalist design at golden hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdpCc2o-DhFsJDWXPnd-HaYfZi-VU6Q2hzMWWPBdW_C_KNtn00iLyepkdO5-zBFk7jSeOulPSD8VqePgCiGyYMu2sxq8I1N2sJo02eXNOHq5FNhRqew9MsFNbc4x6ZzYVk4gp-r3Jlm5nV0bItCTkg3JnNgEh8wG1NPuKVWi316I09A6o9L3m_1rrVp7AaT-tlaFIQVhTZS_8W27M9PE0hmhXn9v9CpZEd1AiwL0U81sgH1j010_zeKL1r95nHTJbxDs6IlHT3doxv"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 md:p-20">
+<div class="max-w-4xl">
+<h1 class="font-headline text-5xl md:text-8xl font-black text-surface leading-none tracking-tighter mb-6">
+                        BREWED IN <br/> THE CLOUDS
+                    </h1>
+<p class="font-body text-lg md:text-xl text-surface/80 max-w-2xl leading-relaxed">
+                        Experience the raw energy of the Deomali Hills. Our flagship café is a sanctuary of sensory exploration, where brutalist design meets organic warmth.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Bento Gallery: The Ambiance -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 h-auto md:h-[800px]">
+<div class="md:col-span-2 md:row-span-2 relative rounded-xl overflow-hidden group">
+<img alt="Barista preparing a precision pour-over coffee" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of a skilled barista pouring hot water over fresh coffee grounds in a glass dripper with steam rising" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC8JFVXjsDIbuLgnLGOHIwXqnOuTxyemq73bjoMj6aKzgyTWabfykwCUX8w5oyZy51XdkMnYHsh1WDdDFVKRDi5WjFoQbTlix1W9gHEYUEZs6rPRkjtKoQLI6dPQdgvN87PqBhPTg6fNwxW_8oO1H1bBuyqt5IOsuHxaxPxuwmUMqQlgMPtf7OpLiuh8AXqhmhm11fNMJhp9IDfh7IVOaAhdECJ68xdfT7rsyHOlUXw_1mt1uPuQqzTILI-Yynqrl6UUYblYV1dsha"/>
+<div class="absolute top-6 right-6 bg-surface-variant/80 backdrop-blur-md px-4 py-2 rounded-full font-headline text-xs font-bold uppercase">
+                        The Ritual
+                    </div>
+</div>
+<div class="md:col-span-2 relative rounded-xl overflow-hidden group">
+<img alt="Rustic modern seating area with tactile textures" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Interior shot of cafe seating with textured concrete walls, leather chairs, and soft natural lighting coming through large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIVByv3NtvDotx6mfHp3Gpm14vXOEEsZ1-KxYgQYMSGTXQiMnhLt_h3zYH06FTjQhC6UwHf_MuZnFX7qDsyELzW6ALrEot_nFbLjMplfSdOWe0AAQsGQQJd-_msUecyXfFI216qtv9k-rcSphB8jniBanNSbd082j_kZlc5GHc5ui6ztEJYIQptMxNO_TcK4qP6TzeS8vdvfAkfq20Q5YK2pvHx8v9thTy4vAgfdR6Fc4Fu7g6M_DQ8Vv3maEj0UYP7NSf8gpO_piM"/>
+</div>
+<div class="relative rounded-xl overflow-hidden group">
+<img alt="Freshly baked specialty snack" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Artisanal almond croissant on a matte ceramic plate with a moody, dark espresso background and dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqikEHemQgeAujKp6-seRpnWxM2AXatghJfI6jxoy5Yiv4S0MKFsOfxXiPfsvkSPLGw9ZVdppQUYBOn4wjRxI6dVmtbFDqcJKEZqQa-KhZewqKOcz9sOs5nD-fV8mmGBmQAaGFIyOAVqZtSuXtrl97MmzuLSBIT_JnKlZyacSmhpH4ugafRZfptg5gGEZcmOisvN3dZGfMKVK1JgC89Pa1Sxyo8sB3fQj0BkA4brZcEUETiHHwAnFrdDf6pXuuLvifyLR55AUjZKw6"/>
+</div>
+<div class="relative rounded-xl overflow-hidden group">
+<img alt="Coffee beans being roasted" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Macro shot of dark roasted coffee beans in a cooling tray with beautiful oily sheen and warm highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrrUn-tAAgEcx0WaSZKT3wr50o-_oJUXJA8HKe5nesIGSqLn3mmVMEZke-nQ4tcA0ABeW-mnRtT7rt4eJ7nJ_2vpAbB4TiM2qhg81cUm6k9_3sktqkTi4F_Izh5Z8v1LxQ5iWwKUEFSIuICCTZoo_XNn5f-_evUomv_KZ4gNRAhaC8HTgcq2smsonrmPQRy4atU66f0eOq9GZNn93yGXMQt4UeV-KJIcrv53TGl8tKZeaD9cBGqYlp8eoPzV7HhaFJktC77Bv218-i"/>
+</div>
+</div>
+</section>
+<!-- Storytelling Section: Deomali Inspiration -->
+<section class="bg-primary-container relative py-32 grain-overlay overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 relative z-20 flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<div class="w-20 h-1 bg-secondary mb-8"></div>
+<h2 class="font-headline text-4xl md:text-6xl font-bold text-surface mb-8 tracking-tight">The Hill <br/>That Breathes</h2>
+<p class="font-body text-surface/70 text-lg leading-relaxed mb-8">
+                        Named after the highest peak in Odisha, Deomali Coffee is more than a roast. It's a commitment to the landscape. We partner directly with tribal farmers, ensuring every bean supports high-altitude biodiversity and sustainable livelihoods.
+                    </p>
+<a class="font-headline text-secondary text-sm font-bold uppercase tracking-widest border-b-2 border-secondary pb-1 hover:opacity-80 transition-opacity" href="#">
+                        Our Sustainability Roadmap
+                    </a>
+</div>
+<div class="w-full md:w-1/2 relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
+<img alt="The mist-covered Deomali Hills" class="rounded-xl shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Moody landscape of high altitude mountain peaks shrouded in dense white fog and mist during early morning hours" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB4trVyMJUXHEZ2wln9IeCDwylZ8nCW1LTayy0nc58AGIQv-wP5wtQheCnzk1AdnIQwahb2L9S_Wy63Ds-_zys6c7kjj1Modaqe9wJ36JVV_9kK2CnSIfyij1QoEDG6_En21WFN6hF3c2q1SRbxzWbf2VGANzI62c5uT0bRejpfhC3ULYXBj1b4y5hfY6o9tMKIwp-NHK_iRQfHtc3FZX--Lv8OMKQzqtDRf2q1Xs7BDRPzarAzcHwFmzmqia7W68onKZECKKphdSr"/>
+</div>
+</div>
+</section>
+<!-- Menu Preview: The Selection -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<h2 class="font-headline text-4xl md:text-6xl font-black text-primary tracking-tighter">THE DAILY DRIP</h2>
+<p class="font-body text-on-surface-variant mt-2">Curated micro-lots and house-made provisions.</p>
+</div>
+<button class="bg-secondary-container text-on-secondary-fixed px-8 py-3 rounded-full font-headline font-bold uppercase text-sm tracking-widest hover:scale-105 active:scale-95 transition-all">
+                        Full Menu
+                    </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Pour Over -->
+<div class="space-y-6">
+<h3 class="font-headline text-2xl font-bold text-secondary border-b border-outline-variant pb-2">Single Origin</h3>
+<div class="flex justify-between items-start group">
+<div>
+<h4 class="font-headline font-bold text-lg text-primary">Hillside Mist</h4>
+<p class="text-sm text-on-surface-variant">V60 • Jasmine • Lemon Peel</p>
+</div>
+<span class="font-headline font-bold text-primary">$6.50</span>
+</div>
+<div class="flex justify-between items-start group">
+<div>
+<h4 class="font-headline font-bold text-lg text-primary">Roasted Earth</h4>
+<p class="text-sm text-on-surface-variant">Chemex • Cocoa • Tobacco</p>
+</div>
+<span class="font-headline font-bold text-primary">$7.00</span>
+</div>
+</div>
+<!-- Specialty Snacks -->
+<div class="space-y-6">
+<h3 class="font-headline text-2xl font-bold text-secondary border-b border-outline-variant pb-2">Provisions</h3>
+<div class="flex justify-between items-start group">
+<div>
+<h4 class="font-headline font-bold text-lg text-primary">Sourdough Toast</h4>
+<p class="text-sm text-on-surface-variant">Manuka • Sea Salt • Ricotta</p>
+</div>
+<span class="font-headline font-bold text-primary">$12.00</span>
+</div>
+<div class="flex justify-between items-start group">
+<div>
+<h4 class="font-headline font-bold text-lg text-primary">Dark Roast Granola</h4>
+<p class="text-sm text-on-surface-variant">Greek Yogurt • Honeycomb</p>
+</div>
+<span class="font-headline font-bold text-primary">$9.50</span>
+</div>
+</div>
+<!-- Signature Roast Slider Logic -->
+<div class="space-y-6">
+<h3 class="font-headline text-2xl font-bold text-secondary border-b border-outline-variant pb-2">Our Intensity</h3>
+<div class="p-6 bg-surface-container-low rounded-xl">
+<div class="flex justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Light</span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Dark</span>
+</div>
+<div class="h-4 w-full bg-gradient-to-r from-surface-container-lowest via-secondary to-primary-container rounded-full relative overflow-hidden">
+<div class="absolute left-1/2 top-0 w-1 h-full bg-surface border-x border-primary"></div>
+</div>
+<p class="mt-4 text-sm font-medium text-center text-primary-container italic">"Today's recommended roast is Medium-Bold"</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location & Hours: Visit Us -->
+<section class="pb-24 px-6 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="rounded-2xl overflow-hidden h-[400px] shadow-xl relative grayscale">
+<img alt="Stylized map of the city location" class="w-full h-full object-cover" data-alt="Artistic map rendering with minimal lines and high contrast, focused on a specific urban grid layout" data-location="Koraput" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYvyFreLhTGR3OJ4xqQWe4hMxTYpE_51ttwxc_ot16HMpmT1cOyg-2jzF9JwAem6g483DVL3RcOoV3_BaA6PkJoF2PCkZA_raWShUsXd4lQTihBN7Lljj-8b8w6EYQ8DOIFzXm8k89XATU3nYGmfnCjtHxGcuAiet4AooGIbedSruhdV_AwxbhMITi5Wd8kcPUXpIj3VW8NoHzVMYwDPdTccHJXn7UvpJYaWut6oyYeUvLYQHwEqyP9mdVBLswMGgrGUOey3arnTA8"/>
+<div class="absolute inset-0 bg-secondary/10 flex items-center justify-center">
+<div class="bg-surface p-4 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<div>
+<h3 class="font-headline text-3xl font-bold text-primary mb-2">Visit the Roastery</h3>
+<p class="text-on-surface-variant text-lg">High Street 42, Koraput, Odisha</p>
+</div>
+<div class="grid grid-cols-2 gap-4 border-t border-outline-variant pt-8">
+<div>
+<h4 class="font-headline text-sm font-bold uppercase text-secondary mb-2">Monday – Friday</h4>
+<p class="text-primary font-medium">07:00 — 19:00</p>
+</div>
+<div>
+<h4 class="font-headline text-sm font-bold uppercase text-secondary mb-2">Saturday — Sunday</h4>
+<p class="text-primary font-medium">09:00 — 21:00</p>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 bg-primary text-surface py-4 rounded-full font-headline font-bold uppercase tracking-widest text-sm hover:bg-secondary transition-colors">
+                            Get Directions
+                        </button>
+<button class="p-4 border border-outline-variant rounded-full hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-[#100403] w-full relative overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 w-full max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<span class="text-3xl font-black text-stone-50 mb-4 block">Deomali</span>
+<p class="font-body text-sm tracking-wide text-stone-400">© 2024 DEOMALI COFFEE. BREWED FOR THE BOLD.</p>
+</div>
+<div>
+<h4 class="font-headline text-secondary mb-4 text-xs font-bold uppercase tracking-widest">Connect</h4>
+<ul class="space-y-3 font-body text-sm text-stone-400">
+<li class="hover:text-stone-50 hover:translate-x-1 transition-transform cursor-pointer">Instagram</li>
+<li class="hover:text-stone-50 hover:translate-x-1 transition-transform cursor-pointer">Twitter</li>
+<li class="hover:text-stone-50 hover:translate-x-1 transition-transform cursor-pointer">Spotify Playlists</li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline text-secondary mb-4 text-xs font-bold uppercase tracking-widest">Inquiries</h4>
+<ul class="space-y-3 font-body text-sm text-stone-400">
+<li class="hover:text-stone-50 hover:translate-x-1 transition-transform cursor-pointer">Brew Guides</li>
+<li class="hover:text-stone-50 hover:translate-x-1 transition-transform cursor-pointer">Wholesale</li>
+<li class="hover:text-stone-50 hover:translate-x-1 transition-transform cursor-pointer">Terms</li>
+<li class="hover:text-stone-50 hover:translate-x-1 transition-transform cursor-pointer">Privacy</li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline text-secondary mb-4 text-xs font-bold uppercase tracking-widest">Newsletter</h4>
+<div class="flex flex-col gap-4">
+<input class="bg-transparent border-b-2 border-stone-600 py-2 text-stone-50 focus:outline-none focus:border-secondary transition-colors placeholder:text-stone-600" placeholder="Join the club" type="email"/>
+<button class="text-stone-50 font-bold text-left hover:text-secondary transition-colors uppercase text-xs tracking-widest">Subscribe</button>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
